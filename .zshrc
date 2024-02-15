@@ -8,23 +8,23 @@ export VISUAL=nvim
 export LANG=en_US.UTF-8
 export USER=darumyro
 
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_RUNTIME_DIR=/run/user/$UID
-export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_STATE_HOME="$HOME"/.local/state
 
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-export GOPATH="$XDG_DATA_HOME/go"
-export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
-export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
-export WEGORC="$XDG_CONFIG_HOME/wego/wegorc"
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GOPATH="$XDG_DATA_HOME"/go
+export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/config
+export SQLITE_HISTORY="$XDG_DATA_HOME"/sqlite_history
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME"/starship/config.toml
+export WEGORC="$XDG_CONFIG_HOME"/wego/wegorc
+export WGETRC="$XDG_CONFIG_HOME"/wgetrc
 
 export EZA_ICONS_AUTO=always
 
@@ -44,6 +44,10 @@ export RCLONE_HUMAN_READABLE=TRUE
 export RCLONE_METADATA=TRUE
 export RCLONE_TRANSFERS=5
 export RCLONE_VERBOSE=1
+
+function _dotfiles() {
+	git --git-dir="$HOME"/dtf/ --work-tree="$HOME"
+}
 
 function dotfiles() {
 	gitui --directory "$HOME"/.dtf/ --workdir "$HOME" "$@"
