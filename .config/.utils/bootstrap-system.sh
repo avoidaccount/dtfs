@@ -34,6 +34,13 @@ cargo install cargo-update typos-cli
 
 mv "$HOME/.local/share/cargo/bin/*" "$PATH"
 
+git clone "https://github.com/avoidaccount/dtfs"
+
+mv "$HOME"/dtfs/.zshrc "$HOME" &&
+	mv "$HOME"/dtfs/.config "$HOME"
+
+rm -rf "$HOME"/dtfs
+
 cd "$HOME" &&
 	cd ../usr/etc &&
 	rm motd &&
