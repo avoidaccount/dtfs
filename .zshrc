@@ -3,9 +3,8 @@ compinit -d "~/.cache/zsh/zcompdump-$ZSH_VERSION"
 promptinit
 
 export EDITOR=nvim
-export VISUAL=nvim
-
 export LANG=en_US.UTF-8
+export VISUAL=nvim
 export USER=darumyro
 
 export XDG_CACHE_HOME="$HOME"/.cache
@@ -43,10 +42,10 @@ export RCLONE_FAST_LIST=TRUE
 export RCLONE_HUMAN_READABLE=TRUE
 export RCLONE_METADATA=TRUE
 export RCLONE_TRANSFERS=5
-export RCLONE_VERBOSE=1
+export RCLONE_PROGRESS=TRUE
 
 function _dotfiles() {
-	git --git-dir="$HOME"/dtf/ --work-tree="$HOME"
+	git --git-dir="$HOME"/dtf/ --work-tree="$HOME" "$@"
 }
 
 function dotfiles() {
@@ -152,6 +151,9 @@ setopt auto_list
 setopt interactive_comments
 setopt prompt_subst
 
+HISTSIZE=10000
+SAVEHIST=10000
+
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
@@ -164,9 +166,6 @@ setopt hist_save_no_dups
 setopt hist_verify
 setopt inc_append_history
 setopt share_history
-
-HISTSIZE=1000
-SAVEHIST=1000
 
 source ~/.shplugins/fzf-tab/fzf-tab.plugin.zsh
 
