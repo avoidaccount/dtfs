@@ -1,0 +1,29 @@
+---
+directory: /storage/emulated/0/Download
+plugins: acousticbrainz badfiles chroma fetchart edit embedart inline lastgenre
+    replaygain the
+
+importer:
+    write: true
+    languages: [jp]
+
+musicbrainz:
+    searchlimits: 10
+    extra_tags: [year, genre, catalognum, country, media]
+    genres: true
+
+fetchart:
+    cautious: true
+    sources: coverart *
+    high_resolution: true
+
+embedart:
+    compare_threshold: 50
+
+replaygain:
+    backend: ffmpeg
+
+paths:
+    default: '%lower{$albumartist}/%lower{$album}/$track %lower{$title}'
+    singleton: '%lower{$albumartist}/%lower{$album}/$track %lower{$title}'
+    comp: '%lower{$albumartist}/%lower{$album}/$track %lower{$title}'

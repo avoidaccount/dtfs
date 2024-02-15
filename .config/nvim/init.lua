@@ -1,0 +1,6 @@
+-- do not change this order (will break)
+require("user.options")
+require("user.keybinds")
+require("user.autocmds")
+require("user.plugins")
+require("user.configs")

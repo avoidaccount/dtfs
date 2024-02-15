@@ -1,0 +1,12 @@
+--format-sort vcodec:av01,acodec:opus
+--merge-output-format mkv
+
+--sub-langs all
+
+--sponsorblock-remove default
+
+--embed-info-json
+--embed-chapters
+--embed-metadata
+--embed-thumbnail
+--embed-subs

@@ -1,0 +1,13 @@
+--theme=mocha
+
+--style=numbers
+
+--decorations=always
+
+--italic-text=always
+
+--paging=never
+
+--map-syntax "*.conf:INI"
+--map-syntax "*.norg:orgmode"
+--map-syntax "*.jsonc:JSON"

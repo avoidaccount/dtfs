@@ -1,0 +1,6 @@
+---
+style: $XDG_CONFIG_HOME/glow/mocha.json
+local: false
+mouse: true
+pager: false
+width: 80

@@ -1,0 +1,17 @@
+--max-columns=150
+--max-columns-preview
+
+--follow
+--hidden
+
+--glob=!.cache
+--glob=!.git
+--glob=!.local
+--glob=!.megaCmd
+--glob=!.termux
+--glob=!.thumbnails
+--glob=!.shplugins
+
+--colors=line:style:bold
+
+--smart-case
