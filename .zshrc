@@ -93,8 +93,7 @@ function zxtract() {
 }
 
 function autodl-with-gdl() {
-	gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py &&
-		delete-empty-dirs "/storage/emulated/0/gdl"
+	gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py
 }
 
 function rust-bin-to-path() {
