@@ -81,7 +81,7 @@ function lt() {
 }
 
 function gdl() {
-	gallery-dl --config-yaml "$XDG_CONFIG_HOME/gallery-dl/config.yaml" "$@"
+	gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
 }
 
 function zarchive() {
@@ -93,13 +93,12 @@ function zxtract() {
 }
 
 function autodl-with-gdl() {
-	gdl --input-file "$XDG_CONFIG_HOME/.utils/gallery-dl/paywall-updates.py" &&
-	gdl --input-file "$XDG_CONFIG_HOME/.utils/gallery-dl/pixiv-updates.txt" &&
-	find "/storage/emulated/0/gdl" -type d -empty -delete -print
+	gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py &&
+		delete-empty-dirs "/storage/emulated/0/gdl"
 }
 
 function rust-bin-to-path() {
-	mv "$XDG_DATA_HOME/cargo/bin/*" "$PATH"
+	mv "$XDG_DATA_HOME"/cargo/bin/* "$PATH"
 }
 
 function delete-empty-dirs() {
@@ -127,13 +126,13 @@ function batch-rename-pattern() {
 }
 
 function sync-with-proton() {
-	rclone sync "$XDG_CONFIG_HOME/.utils/gallery-dl" "proton:dotdroid/.utils/gallery-dl" &&
-	rclone sync "$XDG_CONFIG_HOME/beets/library.db" "proton:dotdroid/beets" &&
-	rclone sync "$XDG_CONFIG_HOME/beets/state.pickle" "proton:dotdroid/beets" &&
-	rclone sync "$XDG_CONFIG_HOME/fd" "proton:dotdroid/fd" &&
-	rclone sync "$XDG_CONFIG_HOME/gallery-dl" "proton:dotdroid/gallery-dl" &&
-	rclone sync "$XDG_CONFIG_HOME/git" "proton:dotdroid/git" &&
-	rclone sync "$XDG_CONFIG_HOME/qobuz-dl" "proton:dotdroid/qobuz-dl" &&
+	rclone sync "$XDG_CONFIG_HOME"/.utils/gallery-dl "proton:dotdroid/.utils/gallery-dl" &&
+	rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
+	rclone sync "$XDG_CONFIG_HOME"/beets/state.pickle "proton:dotdroid/beets" &&
+	rclone sync "$XDG_CONFIG_HOME"/fd "proton:dotdroid/fd" &&
+	rclone sync "$XDG_CONFIG_HOME"/gallery-dl "proton:dotdroid/gallery-dl" &&
+	rclone sync "$XDG_CONFIG_HOME"/git "proton:dotdroid/git" &&
+	rclone sync "$XDG_CONFIG_HOME"/qobuz-dl "proton:dotdroid/qobuz-dl" &&
 	rclone sync "/storage/emulated/0/wikimyro" "proton:wikimyro" &&
 	rclone sync "/storage/emulated/0/tcc" "proton:archive/tcc"
 }
