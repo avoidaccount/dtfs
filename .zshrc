@@ -68,6 +68,10 @@ function rem() {
 	rm --force --recursive --verbose "$@"
 }
 
+function tcr() {
+	tar cfv --auto-compress "$@"
+}
+
 function l() {
 	eza --all --group-directories-first --hyperlink --long --no-quotes --sort=extension
 }
