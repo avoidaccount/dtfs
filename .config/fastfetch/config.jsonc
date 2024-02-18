@@ -15,6 +15,7 @@
 	},
 
 	"modules": [
+		"board",
 		"cpu",
 		"gpu",
 		"memory",
