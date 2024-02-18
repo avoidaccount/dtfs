@@ -69,7 +69,7 @@ function rem() {
 }
 
 function tcr() {
-	tar cfv --auto-compress "$@"
+	tar --auto-compress --create --verbose --file="$@"
 }
 
 function l() {
