@@ -145,7 +145,9 @@ function swap-dashes-with-spaces() {
 }
 
 function wiki() {
+	current_dir=$PWD
 	cd "/storage/emulated/0/wikimyro" && vi
+	cd "$current_dir"
 }
 
 setopt auto_cd
