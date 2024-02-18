@@ -68,6 +68,14 @@ function rem() {
 	rm --force --recursive --verbose "$@"
 }
 
+function delete-empty-dirs() {
+	find "$@" -type d -empty -delete -print
+}
+
+function find-broken-symlinks() {
+	find "$@" -type l ! -exec test -e {} \; -print
+}
+
 function tcr() {
 	tar --auto-compress --create --verbose --file="$@"
 }
@@ -84,32 +92,16 @@ function lt() {
 	eza --all --group-directories-first --hyperlink --level 2 --no-quotes --sort=extension --tree
 }
 
-function gdl() {
-	gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
-}
-
-function zarchive() {
-	7zz a -mx=0 "$@"
-}
-
-function zxtract() {
-	7zz x -y "$@"
-}
-
 function autodl-with-gdl() {
 	gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py
 }
 
-function rust-bin-to-path() {
-	mv "$XDG_DATA_HOME"/cargo/bin/* "$PATH"
+function batch-rename-pattern() {
+	rnr --force --no-dump --recursive --replace-limit=0 "$@"
 }
 
-function delete-empty-dirs() {
-	find "$@" -type d -empty -delete -print
-}
-
-function find-broken-symlinks() {
-	find "$@" -type l ! -exec test -e {} \; -print
+function gdl() {
+	gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
 }
 
 function gdrive-file-download() {
@@ -124,8 +116,8 @@ function install-gdl-dev() {
 	python3 -m pip install -U -I --no-deps --no-cache-dir "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
 }
 
-function batch-rename-pattern() {
-	rnr --force --no-dump --recursive --replace-limit=0 "$@"
+function rust-bin-to-path() {
+	mv "$XDG_DATA_HOME"/cargo/bin/* "$PATH"
 }
 
 function sync-with-proton() {
@@ -148,6 +140,14 @@ function wiki() {
 	current_dir=$PWD
 	cd "/storage/emulated/0/wikimyro" && vi
 	cd "$current_dir"
+}
+
+function zarchive() {
+	7zz a -mx=0 "$@"
+}
+
+function zxtract() {
+	7zz x -y "$@"
 }
 
 setopt auto_cd
