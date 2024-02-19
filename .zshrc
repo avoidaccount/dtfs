@@ -5,6 +5,7 @@ promptinit
 export EDITOR=nvim
 export LANG=en_US.UTF-8
 export VISUAL=nvim
+# necessary for starship on android
 export USER=darumyro
 
 export XDG_CACHE_HOME="$HOME"/.cache
@@ -31,6 +32,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow"
 export FZF_DEFAULT_OPTS="--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 --ansi --cycle --exact --inline-info --layout=reverse --preview-window=wrap"
 
+# global pager
 export PAGER="nvim +Man!"
 
 export RCLONE_BUFFER_SIZE=512Mi
@@ -44,8 +46,9 @@ export RCLONE_METADATA=TRUE
 export RCLONE_TRANSFERS=5
 export RCLONE_PROGRESS=TRUE
 
+# fallback for creating a new bare repo
 function _dotfiles() {
-	git --git-dir="$HOME"/dtf/ --work-tree="$HOME" "$@"
+	git --git-dir="$HOME"/.dtf/ --work-tree="$HOME" "$@"
 }
 
 function dotfiles() {
