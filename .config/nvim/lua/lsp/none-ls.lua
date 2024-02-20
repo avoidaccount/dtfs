@@ -70,7 +70,9 @@ none.setup({
 			},
 		}),
 
+
 		none.builtins.formatting.markdownlint,
+		none.builtins.formatting.markdown_toc,
 
 		none.builtins.formatting.prettier.with({
 			extra_args = {
