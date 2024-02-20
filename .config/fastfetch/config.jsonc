@@ -5,25 +5,25 @@
 		"source": "android_small",
 
 		"padding": {
-			"top": 1,
+			"top": 2,
 		},
 	},
 
 	"display": {
 		"showErrors": true,
-		"separator": " : ",
+		"separator": " ",
 	},
 
 	"modules": [
-		"board",
 		"cpu",
 		"gpu",
 		"memory",
 		"disk",
-		"separator",
+		"break",
 		"kernel",
 		"packages",
 		"shell",
 		"terminal",
+		"terminalfont",
 	],
 }
