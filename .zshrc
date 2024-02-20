@@ -75,8 +75,16 @@ function delete-empty-dirs() {
 	find "$@" -type d -empty -delete -print
 }
 
+function dirinfo() {
+	tree -d -s -h --du -C
+}
+
 function find-broken-symlinks() {
 	find "$@" -type l ! -exec test -e {} \; -print
+}
+
+function rust-bin-to-path() {
+	mv "$XDG_DATA_HOME"/cargo/bin/* "$PATH"
 }
 
 function tcr() {
@@ -117,10 +125,6 @@ function gdrive-folder-download() {
 
 function install-gdl-dev() {
 	python3 -m pip install -U -I --no-deps --no-cache-dir "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
-}
-
-function rust-bin-to-path() {
-	mv "$XDG_DATA_HOME"/cargo/bin/* "$PATH"
 }
 
 function sync-with-proton() {
