@@ -8,6 +8,7 @@ require("interface.scrollview")
 require("interface.transparent")
 -- require("interface.satellite")
 require("interface.treesitter")
+require("interface.treesitter-context")
 
 -- mason must this way to work at boot
 require("lsp.mason")
