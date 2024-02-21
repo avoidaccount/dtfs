@@ -1,0 +1,4 @@
+% rclone, copy
+
+# rclone copy with ignore hashsum
+rclone --ignore-checksum copy "<i1>:<i2>/<i3>/<i4>" "/storage/emulated/0/Download"
