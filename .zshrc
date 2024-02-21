@@ -79,6 +79,10 @@ function dirinfo() {
 	tree -d -s -h --du -C
 }
 
+function dups-purge() {
+	fclones group "$@" | fclones remove
+}
+
 function find-broken-symlinks() {
 	find "$@" -type l ! -exec test -e {} \; -print
 }
