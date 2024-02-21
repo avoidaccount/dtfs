@@ -2,12 +2,12 @@
 palette = "catppuccin_mocha"
 
 [character]
-success_symbol = "[>> 🚀](bold green)"
-error_symbol = "[>> 🚀](bold red)"
+success_symbol = "[🚀 ->](bold green)"
+error_symbol = "[🚀 ->](bold red)"
 
 [directory]
 truncation_length = 4
-style = "bold italic underline rosewater"
+style = "italic lavender"
 
 [username]
 style_user = "bold mauve"
