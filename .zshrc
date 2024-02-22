@@ -75,11 +75,7 @@ function delete-empty-dirs() {
 	find "$@" -type d -empty -delete -print
 }
 
-function dirinfo() {
-	tree -d -s -h --du -C
-}
-
-function dups-purge() {
+function dups-remove() {
 	fclones group "$@" | fclones remove
 }
 
