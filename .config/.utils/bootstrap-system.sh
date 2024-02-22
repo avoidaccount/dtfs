@@ -26,7 +26,7 @@ git clond "https://github.com/hlissner/zsh-autopair" &&
 apt purge nano &&
 	pkg upgrade -y
 
-pkg install 7zip aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang gopass jql man navi nerdfix pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api topgrade wget which zoxide
+pkg install 7zip aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang gopass jql man navi nerdfix pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api topgrade w3m w3m-img wget which zoxide
 
 pip install --no-input beautifulsoup4 gallery-dl pyacoustid pylast pyyaml qobuz-dl requests yt-dlp
 

@@ -23,6 +23,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/config
 export SQLITE_HISTORY="$XDG_DATA_HOME"/sqlite_history
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME"/starship/config.toml
+export W3M_DIR="$XDG_STATE_HOME"/w3m
 export WEGORC="$XDG_CONFIG_HOME"/wego/wegorc
 export WGETRC="$XDG_CONFIG_HOME"/wgetrc
 
