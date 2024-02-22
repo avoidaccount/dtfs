@@ -115,11 +115,11 @@ function gdl() {
 	gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
 }
 
-function gdrive-file-download() {
+function gdrive-file-dl() {
 	gdown --fuzzy --output "/storage/emulated/0/Download" "$@"
 }
 
-function gdrive-folder-download() {
+function gdrive-folder-dl() {
 	gdown --folder --output "/storage/emulated/0/Download" "$@"
 }
 
