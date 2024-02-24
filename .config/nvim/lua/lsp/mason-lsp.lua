@@ -3,6 +3,7 @@ require("mason-lspconfig").setup({
 	-- This setting has no relation with the `automatic_installation` setting.
 	---@type string[]
 	ensure_installed = {
+		"jsonls",
 		"taplo",
 	},
 

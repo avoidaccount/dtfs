@@ -1,8 +1,9 @@
 require("mason-tool-installer").setup({
 	ensure_installed = {
 		"jsonls",
-		"jsonlint",
 		"markdownlint",
+		"selene",
+		"marksman",
 		"prettier",
 		"pyright",
 		"shellharden",
