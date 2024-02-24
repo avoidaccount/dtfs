@@ -101,7 +101,7 @@ function ls() {
 }
 
 function lt() {
-	eza --all --group-directories-first --hyperlink --level 2 --no-quotes --sort=extension --tree
+	eza --all --group-directories-first --hyperlink --no-quotes --sort=extension --tree
 }
 
 function autodl-with-gdl() {
@@ -136,18 +136,12 @@ function sync-with-proton() {
 	rclone sync "$XDG_CONFIG_HOME"/gallery-dl "proton:dotdroid/gallery-dl" &&
 	rclone sync "$XDG_CONFIG_HOME"/git "proton:dotdroid/git" &&
 	rclone sync "$XDG_CONFIG_HOME"/qobuz-dl "proton:dotdroid/qobuz-dl" &&
-	rclone sync "/storage/emulated/0/wikimyro" "proton:wikimyro" &&
+	rclone sync "$HOME"/wikimyro "proton:wikimyro" &&
 	rclone sync "/storage/emulated/0/tcc" "proton:archive/tcc"
 }
 
 function swap-dashes-with-spaces() {
 	rnr --force --no-dump --recursive --replace-limit=0 "-" " " "$@"
-}
-
-function wiki() {
-	current_dir=$PWD
-	cd "/storage/emulated/0/wikimyro" && vi
-	cd "$current_dir"
 }
 
 function zarchive() {
