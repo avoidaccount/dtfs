@@ -43,8 +43,7 @@ none.setup({
 
 		none.builtins.completion.spell,
 
-		none.builtins.diagnostics.jsonlint,
-		-- none.builtins.diagnostics.luachek,
+		-- none.builtins.diagnostics.selene,
 		none.builtins.diagnostics.markdownlint,
 
 		none.builtins.diagnostics.sqlfluff.with({
@@ -54,8 +53,6 @@ none.setup({
 				"sqlite",
 			},
 		}),
-
-		none.builtins.diagnostics.typos,
 
 		none.builtins.diagnostics.write_good.with({
 			extra_filetypes = {
@@ -70,9 +67,7 @@ none.setup({
 			},
 		}),
 
-
 		none.builtins.formatting.markdownlint,
-		none.builtins.formatting.markdown_toc,
 
 		none.builtins.formatting.prettier.with({
 			extra_args = {
@@ -95,9 +90,6 @@ none.setup({
 		}),
 
 		none.builtins.formatting.stylua,
-		none.builtins.formatting.taplo,
-		none.builtins.formatting.trim_newlines,
-		none.builtins.formatting.trim_whitespace,
 
 		none.builtins.formatting.yamlfix.with({
 			env = {
