@@ -37,7 +37,8 @@ mv "$HOME/.local/share/cargo/bin/*" "$PATH"
 git clone "https://github.com/avoidaccount/dtfs"
 
 mv "$HOME"/dtfs/.zshrc "$HOME" &&
-	mv "$HOME"/dtfs/.config "$HOME"
+	mv -r "$HOME"/dtfs/.config "$HOME" &&
+	mv "$HOME"/dtfs/.editorconfig "$HOME"
 
 rm -rf "$HOME"/dtfs
 
