@@ -41,22 +41,27 @@ none.setup({
 			},
 		}),
 
-		none.builtins.completion.spell,
+		-- none.builtins.code_actions.proselint.with({
+		-- 	extra_filetypes = {
+		-- 		"norg",
+		-- 	},
+		-- }),
 
-		-- none.builtins.diagnostics.selene,
 		none.builtins.diagnostics.markdownlint,
+
+		none.builtins.diagnostics.proselint.with({
+			extra_filetypes = {
+				"norg",
+			},
+		}),
+
+		none.builtins.diagnostics.selene,
 
 		none.builtins.diagnostics.sqlfluff.with({
 			-- dialet specify the type of sql
 			extra_args = {
 				"--dialect",
 				"sqlite",
-			},
-		}),
-
-		none.builtins.diagnostics.write_good.with({
-			extra_filetypes = {
-				"norg",
 			},
 		}),
 
