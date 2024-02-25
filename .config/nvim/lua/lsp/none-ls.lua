@@ -41,15 +41,23 @@ none.setup({
 			},
 		}),
 
-		-- none.builtins.code_actions.proselint.with({
-		-- 	extra_filetypes = {
-		-- 		"norg",
-		-- 	},
-		-- }),
+		none.builtins.code_actions.proselint.with({
+			extra_args = {
+				"--json",
+			},
+
+			extra_filetypes = {
+				"norg",
+			},
+		}),
 
 		none.builtins.diagnostics.markdownlint,
 
 		none.builtins.diagnostics.proselint.with({
+			extra_args = {
+				"--json",
+			},
+
 			extra_filetypes = {
 				"norg",
 			},
@@ -58,7 +66,6 @@ none.setup({
 		none.builtins.diagnostics.selene,
 
 		none.builtins.diagnostics.sqlfluff.with({
-			-- dialet specify the type of sql
 			extra_args = {
 				"--dialect",
 				"sqlite",
@@ -110,7 +117,7 @@ none.setup({
 		none.builtins.hover.printenv,
 	},
 
-	debug = false,
+	debug = true,
 
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
