@@ -93,15 +93,15 @@ function tcr() {
 }
 
 function l() {
-	eza --all --group-directories-first --hyperlink --long --no-quotes --sort=extension
+	eza --all --group-directories-first --hyperlink --long --sort=extension
 }
 
 function ls() {
-	eza --all --group-directories-first --hyperlink --no-quotes --sort=extension
+	eza --all --group-directories-first --hyperlink --sort=extension
 }
 
 function lt() {
-	eza --all --group-directories-first --hyperlink --no-quotes --sort=extension --tree
+	eza --all --group-directories-first --hyperlink --sort=extension --tree
 }
 
 function autodl-with-gdl() {
