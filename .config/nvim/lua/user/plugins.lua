@@ -58,9 +58,6 @@ local plugins = {
 
 		"nvimtools/none-ls.nvim",
 		"neovim/nvim-lspconfig",
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		"NvChad/nvterm",
 		"folke/trouble.nvim",
 	},
