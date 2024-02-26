@@ -28,6 +28,12 @@ none.setup({
         none.builtins.diagnostics.selene,
         none.builtins.diagnostics.yamllint,
 
+        none.builtins.diagnostics.write_good.with({
+            extra_filetypes = {
+                "norg",
+            },
+        }),
+
         none.builtins.formatting.markdownlint.with({
             extra_args = {
                 "--config",
