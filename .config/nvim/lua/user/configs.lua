@@ -10,11 +10,6 @@ require("interface.transparent")
 require("interface.treesitter")
 require("interface.treesitter-context")
 
--- mason must this way to work at boot
-require("lsp.mason")
-require("lsp.mason-lsp")
-require("lsp.mason-tool-installer")
-
 require("lsp.cmp")
 require("lsp.lsp")
 require("lsp.none-ls")
