@@ -1,28 +1,28 @@
 require("neorg").setup({
-	load = {
-		["core.defaults"] = {},
+    load = {
+        ["core.defaults"] = {},
 
-		["core.completion"] = {
-			config = {
-				engine = "nvim-cmp",
-				name = "[Neorg]",
-			},
-		},
+        ["core.completion"] = {
+            config = {
+                engine = "nvim-cmp",
+                name = "[Neorg]",
+            },
+        },
 
-		["core.concealer"] = {},
+        ["core.concealer"] = {},
 
-		["core.dirman"] = {
-			config = {
-				workspaces = {
-					default = "/storage/emulated/0/wikimyro",
-				},
+        ["core.dirman"] = {
+            config = {
+                workspaces = {
+                    default = "/storage/emulated/0/wikimyro",
+                },
 
-				index = "index.norg",
-			},
-		},
+                index = "index.norg",
+            },
+        },
 
-		["core.export"] = {},
+        ["core.export"] = {},
 
-		["core.summary"] = {},
-	},
+        ["core.summary"] = {},
+    },
 })
