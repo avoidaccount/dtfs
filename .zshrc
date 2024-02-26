@@ -83,6 +83,10 @@ function rem() {
     rm --force --recursive --verbose "$@"
 }
 
+function aves-add() {
+    termux-media-scan -r "/storage/emulated/0"
+}
+
 function delete-empty-dirs() {
     find "$@" -type d -empty -delete -print
 }
