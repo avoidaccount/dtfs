@@ -1,17 +1,17 @@
 require("scrollview").setup({
-	excluded_filetypes = {
-		"nerdtree",
-	},
+    excluded_filetypes = {
+        "nerdtree",
+    },
 
-	current_only = true,
-	base = "buffer",
-	column = 80,
+    current_only = true,
+    base = "buffer",
+    column = 80,
 
-	signs_on_startup = {
-		"all",
-	},
+    signs_on_startup = {
+        "all",
+    },
 
-	diagnostics_severities = {
-		vim.diagnostic.severity.ERROR,
-	},
+    diagnostics_severities = {
+        vim.diagnostic.severity.ERROR,
+    },
 })

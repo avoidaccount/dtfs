@@ -4,7 +4,9 @@ require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
     snippet = {
-        expand = function(args) require("luasnip").lsp_expand(args.body) end,
+        expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+        end,
     },
 
     window = {
