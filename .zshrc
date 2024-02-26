@@ -2,6 +2,8 @@ autoload -Uz compinit promptinit
 compinit -d "~/.cache/zsh/zcompdump-$ZSH_VERSION"
 promptinit
 
+export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/npm/bin
+
 export EDITOR=nvim
 export LANG=en_US.UTF-8
 export VISUAL=nvim
@@ -47,109 +49,118 @@ export RCLONE_METADATA=TRUE
 export RCLONE_TRANSFERS=5
 export RCLONE_PROGRESS=TRUE
 
+export TAPLO_CONFIG="$XDG_CONFIG_HOME"/fmtlnt/taplo.toml
+
+export YAMLFIX_WHITELINES=1
+export YAMLFIX_INDENT_MAPPING=4
+export YAMLFIX_INDENT_OFFSET=4
+export YAMLFIX_QUOTE_REPRESENTATION='"'
+
+export YAMLLINT_CONFIG_FILE="$XDG_CONFIG_HOME"/fmtlnt/yamllint.yaml
+
 # fallback for creating a new bare repo
 function _dotfiles() {
-	git --git-dir="$HOME"/.dtf/ --work-tree="$HOME" "$@"
+    git --git-dir="$HOME"/.dtf/ --work-tree="$HOME" "$@"
 }
 
 function dotfiles() {
-	gitui --directory "$HOME"/.dtf/ --workdir "$HOME" "$@"
+    gitui --directory "$HOME"/.dtf/ --workdir "$HOME" "$@"
 }
 
 function cop() {
-	cp --interactive --recursive --verbose "$@"
+    cp --interactive --recursive --verbose "$@"
 }
 
 function mdi() {
-	mkdir --parents --verbose "$@"
+    mkdir --parents --verbose "$@"
 }
 
 function mov() {
-	mv --interactive --verbose "$@"
+    mv --interactive --verbose "$@"
 }
 
 function rem() {
-	rm --force --recursive --verbose "$@"
+    rm --force --recursive --verbose "$@"
 }
 
 function delete-empty-dirs() {
-	find "$@" -type d -empty -delete -print
+    find "$@" -type d -empty -delete -print
 }
 
 function dups-remove() {
-	fclones group "$@" | fclones remove
+    fclones group "$@" | fclones remove
 }
 
 function find-broken-symlinks() {
-	find "$@" -type l ! -exec test -e {} \; -print
-}
-
-function rust-bin-to-path() {
-	mv "$XDG_DATA_HOME"/cargo/bin/* "$PATH"
+    find "$@" -type l ! -exec test -e {} \; -print
 }
 
 function tcr() {
-	tar --auto-compress --create --verbose --file="$@"
+    tar --auto-compress --create --verbose --file="$@"
 }
 
 function l() {
-	eza --all --group-directories-first --hyperlink --long --sort=extension
+    eza --all --group-directories-first --hyperlink --long --sort=extension
 }
 
 function ls() {
-	eza --all --group-directories-first --hyperlink --sort=extension
+    eza --all --group-directories-first --hyperlink --sort=extension
 }
 
 function lt() {
-	eza --all --group-directories-first --hyperlink --sort=extension --tree
+    eza --all --group-directories-first --hyperlink --sort=extension --tree
 }
 
 function autodl-with-gdl() {
-	gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py
+    gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py
 }
 
 function batch-rename-pattern() {
-	rnr --force --no-dump --recursive --replace-limit=0 "$@"
+    rnr --force --no-dump --recursive --replace-limit=0 "$@"
 }
 
 function gdl() {
-	gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
+    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
 }
 
 function gdrive-file-dl() {
-	gdown --fuzzy --output "/storage/emulated/0/Download" "$@"
+    gdown --fuzzy --output "/storage/emulated/0/Download" "$@"
 }
 
 function gdrive-folder-dl() {
-	gdown --folder --output "/storage/emulated/0/Download" "$@"
+    gdown --folder --output "/storage/emulated/0/Download" "$@"
 }
 
 function install-gdl-dev() {
-	python3 -m pip install -U -I --no-deps --no-cache-dir "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
+    python3 -m pip install -U -I --no-deps --no-cache-dir "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
+}
+
+function mdlint() {
+    markdownlint --config "$XDG_CONFIG_HOME"/fmtlnt/markdownlint.yaml --json "$@"
 }
 
 function sync-with-proton() {
-	rclone sync "$XDG_CONFIG_HOME"/.utils/gallery-dl "proton:dotdroid/.utils/gallery-dl" &&
-	rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
-	rclone sync "$XDG_CONFIG_HOME"/beets/state.pickle "proton:dotdroid/beets" &&
-	rclone sync "$XDG_CONFIG_HOME"/fd "proton:dotdroid/fd" &&
-	rclone sync "$XDG_CONFIG_HOME"/gallery-dl "proton:dotdroid/gallery-dl" &&
-	rclone sync "$XDG_CONFIG_HOME"/git "proton:dotdroid/git" &&
-	rclone sync "$XDG_CONFIG_HOME"/qobuz-dl "proton:dotdroid/qobuz-dl" &&
-	rclone sync "$HOME"/wikimyro "proton:wikimyro" &&
-	rclone sync "/storage/emulated/0/tcc" "proton:archive/tcc"
+    rclone sync "$XDG_CONFIG_HOME"/.utils/gallery-dl "proton:dotdroid/.utils/gallery-dl" &&
+        rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
+        rclone sync "$XDG_CONFIG_HOME"/beets/state.pickle "proton:dotdroid/beets" &&
+        rclone sync "$XDG_CONFIG_HOME"/fd "proton:dotdroid/fd" &&
+        rclone sync "$XDG_CONFIG_HOME"/gallery-dl "proton:dotdroid/gallery-dl" &&
+        rclone sync "$XDG_CONFIG_HOME"/git "proton:dotdroid/git" &&
+        rclone sync "$XDG_CONFIG_HOME"/qobuz-dl "proton:dotdroid/qobuz-dl" &&
+        rclone sync "$HOME"/wikimyro "proton:wikimyro" &&
+        rclone sync "/storage/emulated/0/tcc" "proton:archive/tcc"
 }
 
 function swap-dashes-with-spaces() {
-	rnr --force --no-dump --recursive --replace-limit=0 "-" " " "$@"
+    rnr --force --no-dump --recursive --replace-limit=0 "-" " " "$@"
 }
 
 function zarchive() {
-	7zz a -mx=0 "$@"
+    7zz a -mx=0 "$@"
 }
 
 function zxtract() {
-	7zz x -y "$@"
+    7zz x -y "$@"
 }
 
 setopt auto_cd
