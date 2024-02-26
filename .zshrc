@@ -84,7 +84,7 @@ function rem() {
 }
 
 function aves-add() {
-    termux-media-scan -r "/storage/emulated/0"
+    termux-media-scan -rv "/storage/emulated/0/gdl"
 }
 
 function delete-empty-dirs() {
