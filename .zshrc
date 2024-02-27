@@ -83,8 +83,8 @@ function rem() {
     rm --force --recursive --verbose "$@"
 }
 
-function aves-add() {
-    termux-media-scan -rv "/storage/emulated/0/gdl"
+function aves() {
+    termux-media-scan -rv "/storage/emulated/0/Pictures"
 }
 
 function delete-empty-dirs() {
