@@ -2,8 +2,8 @@
 palette = "catppuccin_mocha"
 
 [character]
-success_symbol = "[🚀 ->](bold green)"
-error_symbol = "[🚀 ->](bold red)"
+success_symbol = "[>> 🚀](bold green)"
+error_symbol = "[>> 🚀](bold red)"
 
 [directory]
 truncation_length = 4
