@@ -104,14 +104,26 @@ function tcr() {
 }
 
 function l() {
+    eza --group-directories-first --hyperlink --long --sort=extension
+}
+
+function la() {
     eza --all --group-directories-first --hyperlink --long --sort=extension
 }
 
 function ls() {
+    eza --group-directories-first --hyperlink --sort=extension
+}
+
+function lsa() {
     eza --all --group-directories-first --hyperlink --sort=extension
 }
 
 function lt() {
+    eza --group-directories-first --hyperlink --sort=extension --tree
+}
+
+function lta() {
     eza --all --group-directories-first --hyperlink --sort=extension --tree
 }
 
