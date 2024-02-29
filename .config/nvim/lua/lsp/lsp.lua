@@ -1,5 +1,9 @@
 local lspconfig = require("lspconfig")
 
+lspconfig.bashls.setup({})
+lspconfig.cssls.setup({})
+lspconfig.html.setup({})
+lspconfig.eslint.setup({})
 lspconfig.jsonls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.taplo.setup({})
