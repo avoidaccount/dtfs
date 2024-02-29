@@ -3,6 +3,7 @@ local lspconfig = require("lspconfig")
 lspconfig.jsonls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.taplo.setup({})
+-- lspconfig.typos_lsp.setup({})
 -- lspconfig.ltex.setup({})
 
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
