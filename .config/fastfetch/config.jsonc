@@ -1,19 +1,15 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-
     "logo": {
         "source": "android_small",
-
         "padding": {
-            "top": 2,
-        },
+            "top": 2
+        }
     },
-
     "display": {
         "showErrors": true,
-        "separator": " ",
+        "separator": " "
     },
-
     "modules": [
         "cpu",
         "gpu",
@@ -24,6 +20,6 @@
         "packages",
         "shell",
         "terminal",
-        "terminalfont",
-    ],
+        "terminalfont"
+    ]
 }
