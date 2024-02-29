@@ -2,7 +2,7 @@ autoload -Uz compinit promptinit
 compinit -d "~/.cache/zsh/zcompdump-$ZSH_VERSION"
 promptinit
 
-export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/npm/bin
+export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/npm/bin
 
 export EDITOR=nvim
 export LANG=en_US.UTF-8
