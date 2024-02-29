@@ -16,6 +16,13 @@ none.setup({
             },
         }),
 
+        -- swap for typos when possible
+        none.builtins.diagnostics.codespell.with({
+            extra_filetypes = {
+                "norg",
+            },
+        }),
+
         none.builtins.diagnostics.markdownlint,
 
         none.builtins.diagnostics.proselint.with({
@@ -35,6 +42,10 @@ none.setup({
         }),
 
         none.builtins.formatting.shellharden.with({
+            extra_args = {
+                "--transform",
+            },
+
             extra_filetypes = {
                 "zsh",
             },
@@ -43,7 +54,12 @@ none.setup({
         none.builtins.formatting.stylua,
         none.builtins.formatting.yamlfix,
 
-        none.builtins.hover.dictionary,
+        none.builtins.hover.dictionary.with({
+            extra_filetypes = {
+                "norg",
+            },
+        }),
+
         none.builtins.hover.printenv,
     },
 })
