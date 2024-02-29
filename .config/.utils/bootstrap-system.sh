@@ -46,6 +46,8 @@ compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 
 source "$HOME"/.zshrc
 
+go install "github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorconfig-checker@latest"
+
 npm install bash-language-server markdownlint-cli vscode-langservers-extracted yaml-language-server
 
 cd "$HOME" &&
