@@ -23,6 +23,8 @@ none.setup({
             },
         }),
 
+        none.builtins.diagnostics.editorconfig_checker,
+
         none.builtins.diagnostics.markdownlint,
 
         none.builtins.diagnostics.proselint.with({
