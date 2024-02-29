@@ -28,7 +28,7 @@ apt purge nano &&
 
 pkg install 7zip aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang gopass jql man maxcso navi nerdfix pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api topgrade w3m w3m-img wget which zoxide
 
-pip install --no-input beautifulsoup4 gallery-dl proselint pyacoustid pylast pyright pyyaml qobuz-dl requests yamlfix yamllint yt-dlp
+pip install --no-input beautifulsoup4 codespell gallery-dl proselint pyacoustid pylast pyright pyyaml qobuz-dl requests yamlfix yamllint yt-dlp
 
 cargo install cargo-update shellharden stylua taplo-cli typos-cli
 
@@ -46,7 +46,7 @@ compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 
 source "$HOME"/.zshrc
 
-npm install markdownlint-cli vscode-langservers-extracted yaml-language-server
+npm install bash-language-server markdownlint-cli vscode-langservers-extracted yaml-language-server
 
 cd "$HOME" &&
 	cd ../usr/etc &&
