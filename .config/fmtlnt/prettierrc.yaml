@@ -1,6 +1,0 @@
----
-quoteProps: consistent
-trailingComma: all
-singleQuote: false
-proseWrap: always
-singleAttributePerLine: true
