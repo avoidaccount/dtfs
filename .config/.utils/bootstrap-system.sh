@@ -46,7 +46,7 @@ compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 
 source "$HOME"/.zshrc
 
-npm install jsonlint markdownlint-cli prettier vscode-json-languageservice write-good yaml-language-server
+npm install markdownlint-cli vscode-langservers-extracted yaml-language-server
 
 cd "$HOME" &&
 	cd ../usr/etc &&
