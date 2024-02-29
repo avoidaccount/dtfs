@@ -23,7 +23,12 @@ none.setup({
             },
         }),
 
-        none.builtins.diagnostics.editorconfig_checker,
+        none.builtins.diagnostics.editorconfig_checker.with({
+            extra_args = {
+                "--config",
+                vim.fn.expand("$HOME/.ecrc"),
+            },
+        }),
 
         none.builtins.diagnostics.markdownlint,
 
