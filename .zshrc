@@ -2,7 +2,7 @@ autoload -Uz compinit promptinit
 compinit -d "~/.cache/zsh/zcompdump-$ZSH_VERSION"
 promptinit
 
-export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin
+export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
 
 export EDITOR=nvim
 export LANG=en_US.UTF-8
@@ -22,6 +22,8 @@ export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export PIPX_BIN_DIR="$XDG_DATA_HOME"/pipx/bin
+export PIPX_MAN_DIR=/data/data/com.termux/files/usr/share/man
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/config
 export SQLITE_HISTORY="$XDG_DATA_HOME"/sqlite_history
 export STARSHIP_CACHE="$XDG_CACHE_HOME"/starship
@@ -209,6 +211,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 source ~/.shplugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.shplugins/zsh-autopair/autopair.zsh
 
+eval "$(register-python-argcomplete pipx)"
 eval "$(navi widget zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
