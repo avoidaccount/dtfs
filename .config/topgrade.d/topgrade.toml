@@ -33,10 +33,10 @@ disable = ["pip3"]
 # tmux_arguments = "-S /var/tmux.sock"
 
 # Do not set the terminal title (dfault: true)
-# set_title = true
+set_title = true
 
 # Display the time in step titles (default: true)
-# display_time = true
+display_time = true
 
 # Don't ask for confirmations (no default value)
 assume_yes = true
@@ -87,6 +87,8 @@ run_in_tmux = true
 
 # Custom commands
 [commands]
+"PIP Packages"       = "pip install --upgrade beautifulsoup4 proselint pyacoustid pylast pyright pyyaml qobuz-dl requests yamlfix yamllint yt-dlp"
+"Upgrade gallery-dl" = " python3 -m pip install -U -I --no-deps --no-cache-dir 'https://github.com/mikf/gallery-dl/archive/master.tar.gz'"
 # "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 
@@ -94,7 +96,7 @@ run_in_tmux = true
 [python]
 # enable_pip_review = true                         ###disabled by default
 # enable_pip_review_local = true                   ###disabled by default
-# enable_pipupgrade = true                         ###disabled by default
+# enable_pipupgrade = true ###disabled by default
 # pipupgrade_arguments = "-y -u --pip-path pip"    ###disabled by default
 
 
