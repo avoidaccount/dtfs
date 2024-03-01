@@ -16,15 +16,7 @@ none.setup({
             },
         }),
 
-        -- swap for typos when possible
-        none.builtins.diagnostics.codespell.with({
-            extra_filetypes = {
-                "norg",
-            },
-        }),
-
         none.builtins.diagnostics.editorconfig_checker,
-
         none.builtins.diagnostics.markdownlint,
 
         none.builtins.diagnostics.proselint.with({
@@ -48,6 +40,12 @@ none.setup({
                 "--transform",
             },
 
+            extra_filetypes = {
+                "zsh",
+            },
+        }),
+
+        none.builtins.formatting.shfmt.with({
             extra_filetypes = {
                 "zsh",
             },
