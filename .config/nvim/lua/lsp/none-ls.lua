@@ -31,7 +31,7 @@ none.setup({
         none.builtins.formatting.markdownlint.with({
             extra_args = {
                 "--config",
-                vim.fn.expand("$XDG_CONFIG_HOME/fmtlnt/markdownlint.yaml"),
+                vim.fn.expand("$XDG_CONFIG_HOME/.utils/markdownlint.yaml"),
             },
         }),
 
