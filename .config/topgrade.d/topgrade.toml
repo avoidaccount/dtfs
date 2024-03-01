@@ -88,7 +88,7 @@ run_in_tmux = true
 # Custom commands
 [commands]
 "PIP Packages"       = "pip install --upgrade beautifulsoup4 proselint pyacoustid pylast pyright pyyaml qobuz-dl requests yamlfix yamllint yt-dlp"
-"Upgrade gallery-dl" = " python3 -m pip install -U -I --no-deps --no-cache-dir 'https://github.com/mikf/gallery-dl/archive/master.tar.gz'"
+"Upgrade gallery-dl" = "python3 -m pip install -U -I --no-deps --no-cache-dir https://github.com/mikf/gallery-dl/archive/master.tar.gz"
 # "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 
