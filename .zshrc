@@ -2,7 +2,7 @@ autoload -Uz compinit promptinit
 compinit -d "~/.cache/zsh/zcompdump-$ZSH_VERSION"
 promptinit
 
-export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/npm/bin
+export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin
 
 export EDITOR=nvim
 export LANG=en_US.UTF-8
@@ -24,7 +24,11 @@ export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/config
 export SQLITE_HISTORY="$XDG_DATA_HOME"/sqlite_history
+export STARSHIP_CACHE="$XDG_CACHE_HOME"/starship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME"/starship/config.toml
+export TEXMFCONFIG="$XDG_CONFIG_HOME"/texlive/texmf-config
+export TEXMFHOME="$XDG_DATA_HOME"/texmf
+export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
 export W3M_DIR="$XDG_STATE_HOME"/w3m
 export WEGORC="$XDG_CONFIG_HOME"/wego/wegorc
 export WGETRC="$XDG_CONFIG_HOME"/wgetrc
@@ -104,27 +108,15 @@ function tcr() {
 }
 
 function l() {
-    eza --group-directories-first --hyperlink --long --sort=extension
-}
-
-function la() {
     eza --all --group-directories-first --hyperlink --long --sort=extension
 }
 
 function ls() {
-    eza --group-directories-first --hyperlink --sort=extension
-}
-
-function lsa() {
     eza --all --group-directories-first --hyperlink --sort=extension
 }
 
 function lt() {
-    eza --group-directories-first --hyperlink --sort=extension --tree
-}
-
-function lta() {
-    eza --all --group-directories-first --hyperlink --sort=extension --tree
+    eza --all --group-directories-first --hyperlink --level 2 --sort=extension --tree
 }
 
 function autodl-with-gdl() {
@@ -145,10 +137,6 @@ function gdrive-file-dl() {
 
 function gdrive-folder-dl() {
     gdown --folder --output "/storage/emulated/0/Download" "$@"
-}
-
-function install-gdl-dev() {
-    python3 -m pip install -U -I --no-deps --no-cache-dir "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
 }
 
 function mdlint() {
@@ -224,4 +212,3 @@ source ~/.shplugins/zsh-autopair/autopair.zsh
 eval "$(navi widget zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-
