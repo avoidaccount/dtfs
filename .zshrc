@@ -224,3 +224,4 @@ source ~/.shplugins/zsh-autopair/autopair.zsh
 eval "$(navi widget zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
