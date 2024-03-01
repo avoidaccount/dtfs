@@ -62,8 +62,6 @@ export YAMLFIX_INDENT_MAPPING=4
 export YAMLFIX_INDENT_OFFSET=4
 export YAMLFIX_QUOTE_REPRESENTATION='"'
 
-export YAMLLINT_CONFIG_FILE="$XDG_CONFIG_HOME"/yamllint/yamllint.yaml
-
 # fallback for creating a new bare repo
 function _dotfiles() {
     git --git-dir="$HOME"/.dtf/ --work-tree="$HOME" "$@"
