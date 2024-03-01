@@ -1,6 +1,6 @@
 ---
 directory: /storage/emulated/0/Music
-plugins: acousticbrainz badfiles chroma fetchart edit embedart inline lastgenre
+plugins: acousticbrainz badfiles fetchart edit embedart inline lastgenre
     replaygain the
 
 importer:
