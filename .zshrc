@@ -87,16 +87,8 @@ function rem() {
     rm --force --recursive --verbose "$@"
 }
 
-function aves() {
-    termux-media-scan -rv "/storage/emulated/0/Pictures"
-}
-
 function delete-empty-dirs() {
     find "$@" -type d -empty -delete -print
-}
-
-function dups-remove() {
-    fclones group "$@" | fclones remove
 }
 
 function find-broken-symlinks() {
@@ -123,8 +115,16 @@ function autodl-with-gdl() {
     gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py
 }
 
+function aves() {
+    termux-media-scan -rv "/storage/emulated/0/Pictures"
+}
+
 function batch-rename-pattern() {
     rnr --force --no-dump --recursive --replace-limit=0 "$@"
+}
+
+function dups-remove() {
+    fclones group "$@" | fclones remove
 }
 
 function gdl() {
@@ -209,7 +209,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 source ~/.shplugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.shplugins/zsh-autopair/autopair.zsh
 
-eval "$(register-python-argcomplete pipx)"
 eval "$(navi widget zsh)"
+eval "$(register-python-argcomplete pipx)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
