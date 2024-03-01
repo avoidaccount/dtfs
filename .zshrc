@@ -108,15 +108,15 @@ function tcr() {
 }
 
 function l() {
-    eza --all --group-directories-first --hyperlink --long --sort=extension
+    eza --all --group-directories-first --hyperlink --long --sort=extension "$@"
 }
 
 function ls() {
-    eza --all --group-directories-first --hyperlink --sort=extension
+    eza --all --group-directories-first --hyperlink --sort=extension "$@"
 }
 
 function lt() {
-    eza --all --group-directories-first --hyperlink --level 2 --sort=extension --tree
+    eza --all --group-directories-first --hyperlink --level 2 --sort=extension --tree "$@"
 }
 
 function autodl-with-gdl() {
