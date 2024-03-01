@@ -15,24 +15,14 @@ fi
 mkdir "$HOME"/.shplugins
 
 git clone "https://github.com/zdharma-continuum/fast-syntax-highlighting" &&
-    mv fast-syntax-highlighting "$HOME/.shplugins"
+    git clone "https://github.com/Aloxaf/fzf-tab" &&
+    git clone "https://github.com/hlissner/zsh-autopair"
 
-git clone "git clone https://github.com/Aloxaf/fzf-tab" &&
-    mv fzf-tab "$HOME"/.shplugins
+mv fast-syntax-highlighting fzf-tab zsh-autopair "$HOME/.shplugins"
 
-git clond "https://github.com/hlissner/zsh-autopair" &&
-    mv zsh-autopair "$HOME"/.shplugins
-
-apt purge nano &&
-    pkg upgrade -y
+apt purge nano && pkg upgrade -y
 
 pkg install 7zip aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang gopass jql man maxcso navi nerdfix pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api topgrade w3m w3m-img wget which zoxide
-
-pip install --no-input beautifulsoup4 proselint pyacoustid pylast pyright pyyaml qobuz-dl requests yamlfix yamllint yt-dlp
-
-python3 -m pip install -U -I --no-deps --no-cache-dir "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
-
-cargo install cargo-update shellharden stylua taplo-cli typos-cli
 
 git clone "https://github.com/avoidaccount/dtfs"
 
@@ -48,14 +38,21 @@ compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 
 source "$HOME"/.zshrc
 
-go install "github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorconfig-checker@latest"
+pip install --no-input beautifulsoup4 pipx pylast pyyaml requests
+
+pipx install beets proselint pyright qobuz-dl yamlfix yamllint yt-dlp &&
+    pipx install "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
+
+pipx inject gallery-dl pyyaml &&
+    pipx inject beets beautifulsoup4 pylast requests
+
+cargo install cargo-update shellharden stylua taplo-cli typos-cli
+
+go install "github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorconfig-checker@latest" "mvdan.cc/sh/v3/cmd/shfmt@latest"
 
 npm install bash-language-server markdownlint-cli vscode-langservers-extracted yaml-language-server
 
-cd "$HOME" &&
-    cd ../usr/etc &&
-    rm motd &&
-    cd
+cd "$HOME" && cd ../usr/etc && rm motd && cd
 
 bat cache --build
 
