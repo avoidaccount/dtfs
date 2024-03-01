@@ -62,7 +62,7 @@ export YAMLFIX_INDENT_MAPPING=4
 export YAMLFIX_INDENT_OFFSET=4
 export YAMLFIX_QUOTE_REPRESENTATION='"'
 
-export YAMLLINT_CONFIG_FILE="$XDG_CONFIG_HOME"/fmtlnt/yamllint.yaml
+export YAMLLINT_CONFIG_FILE="$XDG_CONFIG_HOME"/yamllint/yamllint.yaml
 
 # fallback for creating a new bare repo
 function _dotfiles() {
@@ -142,7 +142,7 @@ function gdrive-folder-dl() {
 }
 
 function mdlint() {
-    markdownlint --config "$XDG_CONFIG_HOME"/fmtlnt/markdownlint.yaml --json "$@"
+    markdownlint --config "$XDG_CONFIG_HOME"/.utils/markdownlint.yaml --json "$@"
 }
 
 function sync-with-proton() {
