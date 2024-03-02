@@ -162,11 +162,11 @@ function swap-dashes-with-spaces() {
 }
 
 function zarchive() {
-    7zz a -mx=0 "$@"
+    7z a -mx=0 "$@"
 }
 
 function zxtract() {
-    7zz x -y "$@"
+    7z x -y "$@"
 }
 
 setopt auto_cd
