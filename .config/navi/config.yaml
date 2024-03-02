@@ -15,7 +15,7 @@ finder:
     command: fzf
 
 cheats:
-    paths: [$XDG_CONFIG_HOME/.utils]
+    paths: [$XDG_CONFIG_HOME/.utilities]
 
 client:
     tealdeer: true
