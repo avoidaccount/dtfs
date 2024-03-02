@@ -1,10 +1,31 @@
 require("telescope").load_extension("harpoon")
+require("telescope").load_extension("undo")
 require("telescope").load_extension("zoxide")
 
 vim.keymap.set("n", "<leader>cd", require("telescope").extensions.zoxide.list)
 
 require("telescope").setup({
     defaults = {
+        extensions = {
+            undo = {
+                mappings = {
+                    i = {
+                        ["<cr>"] = require("telescope-undo.actions").yank_additions,
+                        ["<S-cr>"] = require("telescope-undo.actions").yank_deletions,
+                        ["<C-cr>"] = require("telescope-undo.actions").restore,
+                        -- alternative defaults, for users whose terminals do questionable things with modified <cr>
+                        ["<C-y>"] = require("telescope-undo.actions").yank_deletions,
+                        ["<C-r>"] = require("telescope-undo.actions").restore,
+                    },
+                    n = {
+                        ["y"] = require("telescope-undo.actions").yank_additions,
+                        ["Y"] = require("telescope-undo.actions").yank_deletions,
+                        ["u"] = require("telescope-undo.actions").restore,
+                    },
+                },
+            },
+        },
+
         preview = {
             mime_hook = function(filepath, bufnr, opts)
                 local is_image = function(filepath)

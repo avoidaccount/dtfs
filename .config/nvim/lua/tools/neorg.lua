@@ -14,14 +14,21 @@ require("neorg").setup({
         ["core.dirman"] = {
             config = {
                 workspaces = {
-                    default = "/storage/emulated/0/wikimyro",
+                    knowlegdebase = "$HOME/wikimyro",
                 },
 
-                index = "index.norg",
+                default_workspace = "knowlegdebase",
             },
         },
 
         ["core.export"] = {},
+        ["core.export.markdown"] = {},
+
+        ["core.presenter"] = {
+            config = {
+                zen_mode = "zen-mode",
+            },
+        },
 
         ["core.summary"] = {},
     },

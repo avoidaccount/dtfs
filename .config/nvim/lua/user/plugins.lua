@@ -119,10 +119,12 @@ local plugins = {
             "nvim-telescope/telescope.nvim",
             dependencies = {
                 "nvim-lua/plenary.nvim",
+                "debugloop/telescope-undo.nvim",
                 "jvgrootveld/telescope-zoxide",
             },
         },
 
+        "folke/zen-mode.nvim",
         "kyazdani42/nvim-tree.lua",
         "mbbill/undotree",
         "folke/which-key.nvim",
