@@ -24,11 +24,16 @@ cmp.setup({
 
     sources = cmp.config.sources({
         { name = "luasnip" },
-        { name = "nvim_lsp" },
+    }, {
+        name = "latex_symbols",
+        option = {
+            strategy = 0, -- mixed
+        },
     }, {
         { name = "buffer" },
         { name = "path" },
         { name = "neorg" },
+        { name = "nerfont" },
     }),
 })
 
@@ -49,6 +54,3 @@ cmp.setup.cmdline(":", {
         { name = "cmdline" },
     }),
 })
-
--- Set up lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
