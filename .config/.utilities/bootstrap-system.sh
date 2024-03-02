@@ -4,7 +4,7 @@ termux-setup-storage
 
 pkg upgrade -y
 
-pkg install zsh neovim rclone git nodejs python python-pip
+pkg install zsh neovim rclone git nodejs python python-pip nala
 
 if [[ -d "$HOME"/.config ]]; then
     echo "XDG_CONFIG_HOME already exists"
@@ -22,7 +22,9 @@ mv fast-syntax-highlighting fzf-tab zsh-autopair "$HOME/.shplugins"
 
 apt purge nano && pkg upgrade -y
 
-pkg install 7zip aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang gopass jql man maxcso navi nerdfix pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
+nala install 7zip aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang gopass jql man maxcso navi nerdfix pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
+
+nala --install-completion zsh
 
 git clone "https://github.com/avoidaccount/dtfs"
 
