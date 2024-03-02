@@ -25,7 +25,7 @@ mv zsh-syntax-highlighting fzf-tab zsh-autopair "$HOME/.shplugins" &&
 
 apt purge nano && pkg upgrade -y
 
-nala install aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang jql man maxcso navi nerdfix p7zip pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
+nala install android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang jql man maxcso navi nerdfix p7zip pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
 
 git clone "https://github.com/avoidaccount/dtfs"
 
