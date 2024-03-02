@@ -1,138 +1,138 @@
 [[columns]]
-  align             = "Left"
-  kind              = "Pid"
-  nonnumeric_search = false
-  numeric_search    = true
-  style             = "BrightYellow|Yellow"
+    align             = "Left"
+    kind              = "Pid"
+    nonnumeric_search = false
+    numeric_search    = true
+    style             = "BrightYellow|Yellow"
 
 [[columns]]
-  align             = "Left"
-  kind              = "User"
-  nonnumeric_search = true
-  numeric_search    = false
-  style             = "BrightGreen|Green"
+    align             = "Left"
+    kind              = "User"
+    nonnumeric_search = true
+    numeric_search    = false
+    style             = "BrightGreen|Green"
 
 [[columns]]
-  align             = "Left"
-  kind              = "Separator"
-  nonnumeric_search = false
-  numeric_search    = false
-  style             = "White|BrightBlack"
+    align             = "Left"
+    kind              = "Separator"
+    nonnumeric_search = false
+    numeric_search    = false
+    style             = "White|BrightBlack"
 
 [[columns]]
-  align             = "Left"
-  kind              = "Tty"
-  nonnumeric_search = false
-  numeric_search    = false
-  style             = "BrightWhite|Black"
+    align             = "Left"
+    kind              = "Tty"
+    nonnumeric_search = false
+    numeric_search    = false
+    style             = "BrightWhite|Black"
 
 [[columns]]
-  align             = "Right"
-  kind              = "UsageCpu"
-  nonnumeric_search = false
-  numeric_search    = false
-  style             = "ByPercentage"
+    align             = "Right"
+    kind              = "UsageCpu"
+    nonnumeric_search = false
+    numeric_search    = false
+    style             = "ByPercentage"
 
 [[columns]]
-  align             = "Right"
-  kind              = "UsageMem"
-  nonnumeric_search = false
-  numeric_search    = false
-  style             = "ByPercentage"
+    align             = "Right"
+    kind              = "UsageMem"
+    nonnumeric_search = false
+    numeric_search    = false
+    style             = "ByPercentage"
 
 [[columns]]
-  align             = "Left"
-  kind              = "CpuTime"
-  nonnumeric_search = false
-  numeric_search    = false
-  style             = "BrightCyan|Cyan"
+    align             = "Left"
+    kind              = "CpuTime"
+    nonnumeric_search = false
+    numeric_search    = false
+    style             = "BrightCyan|Cyan"
 
 [[columns]]
-  align             = "Right"
-  kind              = "MultiSlot"
-  nonnumeric_search = false
-  numeric_search    = false
-  style             = "ByUnit"
+    align             = "Right"
+    kind              = "MultiSlot"
+    nonnumeric_search = false
+    numeric_search    = false
+    style             = "ByUnit"
 
 [[columns]]
-  align             = "Left"
-  kind              = "Separator"
-  nonnumeric_search = false
-  numeric_search    = false
-  style             = "White|BrightBlack"
+    align             = "Left"
+    kind              = "Separator"
+    nonnumeric_search = false
+    numeric_search    = false
+    style             = "White|BrightBlack"
 
 [[columns]]
-  align             = "Left"
-  kind              = "Command"
-  nonnumeric_search = true
-  numeric_search    = false
-  style             = "BrightWhite|Black"
+    align             = "Left"
+    kind              = "Command"
+    nonnumeric_search = true
+    numeric_search    = false
+    style             = "BrightWhite|Black"
 
 [style]
-  header = "BrightWhite|Black"
-  tree   = "BrightWhite|Black"
-  unit   = "BrightWhite|Black"
+    header = "BrightWhite|Black"
+    tree   = "BrightWhite|Black"
+    unit   = "BrightWhite|Black"
 
-  [style.by_percentage]
-    color_000 = "BrightBlue|Blue"
-    color_025 = "BrightGreen|Green"
-    color_050 = "BrightYellow|Yellow"
-    color_075 = "BrightRed|Red"
-    color_100 = "BrightRed|Red"
+    [style.by_percentage]
+        color_000 = "BrightBlue|Blue"
+        color_025 = "BrightGreen|Green"
+        color_050 = "BrightYellow|Yellow"
+        color_075 = "BrightRed|Red"
+        color_100 = "BrightRed|Red"
 
-  [style.by_state]
-    color_d = "BrightRed|Red"
-    color_k = "BrightYellow|Yellow"
-    color_p = "BrightYellow|Yellow"
-    color_r = "BrightGreen|Green"
-    color_s = "BrightBlue|Blue"
-    color_t = "BrightCyan|Cyan"
-    color_w = "BrightYellow|Yellow"
-    color_x = "BrightMagenta|Magenta"
-    color_z = "BrightMagenta|Magenta"
+    [style.by_state]
+        color_d = "BrightRed|Red"
+        color_k = "BrightYellow|Yellow"
+        color_p = "BrightYellow|Yellow"
+        color_r = "BrightGreen|Green"
+        color_s = "BrightBlue|Blue"
+        color_t = "BrightCyan|Cyan"
+        color_w = "BrightYellow|Yellow"
+        color_x = "BrightMagenta|Magenta"
+        color_z = "BrightMagenta|Magenta"
 
-  [style.by_unit]
-    color_g = "BrightYellow|Yellow"
-    color_k = "BrightBlue|Blue"
-    color_m = "BrightGreen|Green"
-    color_p = "BrightRed|Red"
-    color_t = "BrightRed|Red"
-    color_x = "BrightBlue|Blue"
+    [style.by_unit]
+        color_g = "BrightYellow|Yellow"
+        color_k = "BrightBlue|Blue"
+        color_m = "BrightGreen|Green"
+        color_p = "BrightRed|Red"
+        color_t = "BrightRed|Red"
+        color_x = "BrightBlue|Blue"
 
 [search]
-  case              = "Smart"
-  logic             = "And"
-  nonnumeric_search = "Partial"
-  numeric_search    = "Exact"
+    case              = "Smart"
+    logic             = "And"
+    nonnumeric_search = "Partial"
+    numeric_search    = "Exact"
 
 [display]
-  abbr_sid              = true
-  ascending             = "▲"
-  color_mode            = "Auto"
-  cut_to_pager          = false
-  cut_to_pipe           = false
-  cut_to_terminal       = true
-  descending            = "▼"
-  separator             = "│"
-  show_children_in_tree = true
-  show_footer           = false
-  show_header           = true
-  show_kthreads         = true
-  show_parent_in_tree   = true
-  show_self             = false
-  show_thread           = false
-  show_thread_in_tree   = true
-  theme                 = "Auto"
-  tree_symbols          = ["│", "─", "┬", "├", "└"]
+    abbr_sid              = true
+    ascending             = "▲"
+    color_mode            = "Auto"
+    cut_to_pager          = false
+    cut_to_pipe           = false
+    cut_to_terminal       = true
+    descending            = "▼"
+    separator             = "│"
+    show_children_in_tree = true
+    show_footer           = false
+    show_header           = true
+    show_kthreads         = true
+    show_parent_in_tree   = true
+    show_self             = false
+    show_thread           = false
+    show_thread_in_tree   = true
+    theme                 = "Auto"
+    tree_symbols          = ["│", "─", "┬", "├", "└"]
 
 [sort]
-  column = 0
-  order  = "Ascending"
+    column = 0
+    order  = "Ascending"
 
 [docker]
-  path = "unix:///var/run/docker.sock"
+    path = "unix:///var/run/docker.sock"
 
 [pager]
-  detect_width = false
-  mode         = "Auto"
-  use_builtin  = true
+    detect_width = false
+    mode         = "Auto"
+    use_builtin  = true

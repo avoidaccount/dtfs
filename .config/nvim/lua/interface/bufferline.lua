@@ -5,7 +5,7 @@ bufferline.setup({
         mode = "buffers",
         style_preset = bufferline.style_preset.default,
         themable = true,
-        numbers = "both",
+        numbers = "buffer_id",
         close_command = "bdelete! %d", -- can be a string | function, | false see "Mouse actions"
         right_mouse_command = "bdelete! %d", -- can be a string | function | false, see "Mouse actions"
         left_mouse_command = "buffer %d", -- can be a string | function, | false see "Mouse actions"
