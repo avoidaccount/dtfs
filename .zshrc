@@ -128,7 +128,7 @@ function dups-remove() {
 }
 
 function gdl() {
-    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
+    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@" && termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
 function gdrive-file-dl() {
