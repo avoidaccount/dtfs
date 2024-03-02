@@ -112,7 +112,7 @@ function lt() {
 }
 
 function autodl-with-gdl() {
-    gdl --input-file "$XDG_CONFIG_HOME"/.utils/gallery-dl/updates.py
+    gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.py
 }
 
 function aves() {
@@ -140,11 +140,11 @@ function gdrive-folder-dl() {
 }
 
 function mdlint() {
-    markdownlint --config "$XDG_CONFIG_HOME"/.utils/markdownlint.yaml --json "$@"
+    markdownlint --config "$XDG_CONFIG_HOME"/.utilities/markdownlint.yaml --json "$@"
 }
 
 function sync-with-proton() {
-    rclone sync "$XDG_CONFIG_HOME"/.utils/gallery-dl "proton:dotdroid/.utils/gallery-dl" &&
+    rclone sync "$XDG_CONFIG_HOME"/.utilities/gallery-dl "proton:dotdroid/.utilities/gallery-dl" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/state.pickle "proton:dotdroid/beets" &&
         rclone sync "$XDG_CONFIG_HOME"/fd "proton:dotdroid/fd" &&
