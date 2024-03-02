@@ -24,8 +24,6 @@ apt purge nano && pkg upgrade -y
 
 nala install 7zip aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang gopass jql man maxcso navi nerdfix pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
 
-nala --install-completion zsh
-
 git clone "https://github.com/avoidaccount/dtfs"
 
 mv "$HOME"/dtfs/.zshrc "$HOME" &&

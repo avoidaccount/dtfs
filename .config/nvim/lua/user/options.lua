@@ -1,14 +1,17 @@
 -- local variables
 local opt = vim.opt
+
 vim.treesitter.language.register("bash", "zsh")
+
 -- disable netrw in favor of nvim-file-explorer
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- disable language providers
-vim.g.loaded_python3_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
 
 -- auto indent new lines
 opt.autoindent = true
@@ -27,9 +30,6 @@ opt.confirm = true
 
 -- highlight current line
 opt.cursorline = true
-
--- indent using spaces
-opt.expandtab = false
 
 -- control how text is auto formatted and indented
 opt.formatoptions = "jcroqlnt"
@@ -77,9 +77,6 @@ opt.relativenumber = true
 -- lines of context
 opt.scrolloff = 4
 
--- size of an indent
-opt.shiftwidth = 4
-
 -- show matching brackets
 opt.showmatch = true
 
@@ -89,17 +86,11 @@ opt.smartcase = true
 -- auto insert indents
 opt.smartindent = true
 
--- ensuring indent size
-opt.softtabstop = 4
-
 -- spelling language
 opt.spelllang = "en"
 
 -- enable swapfile
 opt.swapfile = true
-
--- number of spaces used in indentation
-opt.tabstop = 4
 
 -- enable true colors
 opt.termguicolors = true
