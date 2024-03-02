@@ -1,5 +1,7 @@
 autoload -Uz compinit promptinit
-compinit -d "~/.cache/zsh/zcompdump-$ZSH_VERSION"
+[ -d ~/.cache/zsh ] || mkdir -p ~/.cache/zsh
+zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
+compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 promptinit
 
 export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
