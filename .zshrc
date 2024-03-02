@@ -190,7 +190,7 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 
-source ~/.shplugins/fzf-tab/fzf-tab.plugin.zsh
+source "$HOME"/.shplugins/fzf-tab/fzf-tab.plugin.zsh
 
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
@@ -206,8 +206,9 @@ zstyle ':completion:*' rehash true
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-source ~/.shplugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source ~/.shplugins/zsh-autopair/autopair.zsh
+source "$HOME"/.shplugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source "$HOME"/.shplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source "$HOME"/.shplugins/zsh-autopair/autopair.zsh
 
 eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"
