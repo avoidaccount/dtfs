@@ -194,8 +194,6 @@ source ~/.shplugins/fzf-tab/fzf-tab.plugin.zsh
 
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
-zstyle ':completion:*' cache-path "~/.cache/zsh/zcompcache"
-
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3>7?7:($#PREFIX+$#SUFFIX)/3))numeric)'
