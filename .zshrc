@@ -116,7 +116,7 @@ function autodl-with-gdl() {
 }
 
 function aves() {
-    termux-media-scan -rv "/storage/emulated/0/Pictures"
+    termux-media-scan -r "/storage/emulated/0/Pictures"
 }
 
 function batch-rename-pattern() {
