@@ -41,6 +41,8 @@ local plugins = {
         "hrsh7th/cmp-cmdline",
         "saadparwaiz1/cmp_luasnip",
         "kdheepak/cmp-latex-symbols",
+        "hrsh7th/cmp-nvim-lsp-document-symbol",
+        "hrsh7th/cmp-nvim-lsp-signature-help",
         "L3MON4D3/LuaSnip",
         "rafamadriz/friendly-snippets",
         "nvimtools/none-ls.nvim",
