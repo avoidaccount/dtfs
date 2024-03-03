@@ -21,20 +21,16 @@ local plugins = {
         -- "lewis6991/satellite.nvim",
         "xiyaowong/transparent.nvim",
 
-        {
-            "nvim-lualine/lualine.nvim",
-            dependencies = {
-                "nvim-tree/nvim-web-devicons",
-            },
-        },
-
+        "nvim-lualine/lualine.nvim",
+        "nvim-tree/nvim-web-devicons",
         "dstein64/nvim-scrollview",
 
         {
             "nvim-treesitter/nvim-treesitter",
-            "nvim-treesitter/nvim-treesitter-context",
             build = ":TSUpdate",
         },
+
+        "nvim-treesitter/nvim-treesitter-context",
     },
 
     {
@@ -48,7 +44,6 @@ local plugins = {
         "L3MON4D3/LuaSnip",
         "rafamadriz/friendly-snippets",
         "nvimtools/none-ls.nvim",
-
         "neovim/nvim-lspconfig",
         "NvChad/nvterm",
         "folke/trouble.nvim",
@@ -63,52 +58,30 @@ local plugins = {
         "rebelot/kanagawa.nvim",
         "navarasu/onedark.nvim",
         "folke/tokyonight.nvim",
-        priority = 1000,
     },
 
     {
-        {
-            "windwp/nvim-autopairs",
-            event = "InsertEnter",
-        },
 
+        "windwp/nvim-autopairs",
         "norcalli/nvim-colorizer.lua",
         "numToStr/Comment.nvim",
         "lewis6991/gitsigns.nvim",
         "ThePrimeagen/harpoon",
         "lukas-reineke/indent-blankline.nvim",
 
-        {
-            "iamcco/markdown-preview.nvim",
-
-            cmd = {
-                "MarkdownPreviewToggle",
-                "MarkdownPreview",
-                "MarkdownPreviewStop",
-            },
-
-            ft = {
-                "markdown",
-            },
-
-            build = function()
-                vim.fn["mkdp#util#install"]()
-            end,
-        },
-
         "tversteeg/registers.nvim",
         "kylechui/nvim-surround",
 
         {
             "nvim-neorg/neorg",
+
             build = ":Neorg sync-parsers",
-            dependencies = {
-                "3rd/image.nvim",
-            },
+            dependencies = { "3rd/image.nvim" },
         },
 
         {
             "nvim-telescope/telescope.nvim",
+
             dependencies = {
                 "nvim-lua/plenary.nvim",
                 "debugloop/telescope-undo.nvim",
