@@ -38,20 +38,17 @@ local plugins = {
     },
 
     {
-        {
-            "hrsh7th/nvim-cmp",
-            dependencies = {
-                "hrsh7th/cmp-buffer",
-                "hrsh7th/cmp-path",
-                "kdheepak/cmp-latex-symbols",
-                {
-                    "L3MON4D3/LuaSnip",
-                    build = "make install_jsregexp",
-                },
-            },
-        },
-
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-cmdline",
+        "saadparwaiz1/cmp_luasnip",
+        "kdheepak/cmp-latex-symbols",
+        "L3MON4D3/LuaSnip",
+        "rafamadriz/friendly-snippets",
         "nvimtools/none-ls.nvim",
+
         "neovim/nvim-lspconfig",
         "NvChad/nvterm",
         "folke/trouble.nvim",

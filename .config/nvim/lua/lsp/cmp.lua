@@ -19,25 +19,18 @@ cmp.setup({
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+        ["<TAB>"] = cmp.mapping.confirm({ select = true }),
     }),
 
     sources = cmp.config.sources({
+        { name = "nvim_lsp" },
         { name = "luasnip" },
-    }, {
-        name = "latex_symbols",
-        option = {
-            strategy = 0, -- mixed
-        },
-    }, {
-        { name = "buffer" },
-        { name = "path" },
+        { name = "latex_symbols", option = { strategy = 0 } },
         { name = "neorg" },
-        { name = "nerfont" },
+        { name = "buffer" },
     }),
 })
 
--- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline({ "/", "?" }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
@@ -45,12 +38,10 @@ cmp.setup.cmdline({ "/", "?" }, {
     },
 })
 
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
         { name = "path" },
-    }, {
-        { name = "cmdline" },
+        { name = "cmdlin" },
     }),
 })

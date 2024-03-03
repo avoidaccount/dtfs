@@ -6,13 +6,7 @@ lspconfig.html.setup({})
 lspconfig.eslint.setup({})
 lspconfig.jsonls.setup({})
 lspconfig.pyright.setup({})
-
-lspconfig.taplo.setup({
-    config = {
-        filetypes = { "editorconfig", "toml" },
-    },
-})
-
+lspconfig.taplo.setup({})
 lspconfig.texlab.setup({})
 -- lspconfig.typos_lsp.setup({})
 -- lspconfig.ltex.setup({})
