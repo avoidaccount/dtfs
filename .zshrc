@@ -114,11 +114,11 @@ function lt() {
 }
 
 function autodl-with-gdl() {
-    gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.py
+    gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.txt && termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
 function aves() {
-    termux-media-scan -r "/storage/emulated/0/Pictures"
+    termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
 function batch-rename-pattern() {
