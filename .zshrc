@@ -117,10 +117,6 @@ function autodl-with-gdl() {
     gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.txt && termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
-function aves() {
-    termux-media-scan -r "/storage/emulated/0/gdl"
-}
-
 function batch-rename-pattern() {
     rnr --force --no-dump --recursive --replace-limit=0 "$@"
 }

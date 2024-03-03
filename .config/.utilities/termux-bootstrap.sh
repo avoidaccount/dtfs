@@ -4,7 +4,7 @@ termux-setup-storage
 
 pkg upgrade -y
 
-pkg install -y zsh neovim rclone git nodejs python python-pip nala
+pkg install -y zsh neovim rclone git nodejs python python-pip nala curl
 
 if [[ -d "$HOME"/.config ]]; then
     echo "XDG_CONFIG_HOME already exists"
@@ -23,6 +23,10 @@ mv zsh-syntax-highlighting fzf-tab zsh-autopair "$HOME/.shplugins" &&
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
 
+curl "https://raw.githubusercontent.com/avoidaccount/dtfs/main/.zshrc" >"$HOME"/.zshrc
+
+source "$HOME"/.zshrc
+
 apt purge -y nano && pkg upgrade -y
 
 nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang jql man maxcso navi nerdfix p7zip pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
@@ -34,12 +38,6 @@ mv "$HOME"/dtfs/.zshrc "$HOME" &&
     mv "$HOME"/dtfs/.editorconfig "$HOME"
 
 rm -rf "$HOME"/dtfs
-
-mkdir ~/.cache/zsh
-
-compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
-
-source "$HOME"/.zshrc
 
 pip install --no-input beautifulsoup4 pipx pylast pyyaml requests
 
