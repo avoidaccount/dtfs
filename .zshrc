@@ -114,7 +114,8 @@ function lt() {
 }
 
 function autodl-with-gdl() {
-    gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.txt && termux-media-scan -r "/storage/emulated/0/gdl"
+    gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.txt ;
+    termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
 function batch-rename-pattern() {
@@ -126,7 +127,8 @@ function dups-remove() {
 }
 
 function gdl() {
-    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@" && termux-media-scan -r "/storage/emulated/0/gdl"
+    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@" ;
+    termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
 function gdrive-file-dl() {
@@ -138,7 +140,9 @@ function gdrive-folder-dl() {
 }
 
 function mdlint() {
-    markdownlint --config "$XDG_CONFIG_HOME"/.utilities/markdownlint.yaml --json "$@"
+    markdownlint --config "$XDG_CONFIG_HOME"/.utilities/markdownlint.yaml --json --output ".tmplint.json" "$@" ;
+        bat ".tmplint.json" ;
+        rm ".tmplint.json"
 }
 
 function sync-with-proton() {
