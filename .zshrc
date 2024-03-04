@@ -209,6 +209,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 source "$HOME"/.shplugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source "$HOME"/.shplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source "$HOME"/.shplugins/zsh-autopair/autopair.zsh
+source "$HOME"/.shplugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"

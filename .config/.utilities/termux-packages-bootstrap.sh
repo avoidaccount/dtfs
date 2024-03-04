@@ -16,9 +16,10 @@ mkdir "$HOME"/.shplugins
 
 git clone "https://github.com/Aloxaf/fzf-tab" &&
     git clone "https://github.com/zsh-users/zsh-syntax-highlighting" &&
-    git clone "https://github.com/hlissner/zsh-autopair"
+    git clone "https://github.com/hlissner/zsh-autopair" &&
+    git clone "https://github.com/zsh-users/zsh-autosuggestions"
 
-mv zsh-syntax-highlighting fzf-tab zsh-autopair "$HOME/.shplugins" &&
+mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions "$HOME/.shplugins" &&
     git clone "https://github.com/catppuccin/zsh-syntax-highlighting" &&
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
