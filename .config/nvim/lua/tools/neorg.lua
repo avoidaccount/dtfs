@@ -22,7 +22,11 @@ require("neorg").setup({
         },
 
         ["core.export"] = {},
-        ["core.export.markdown"] = {},
+        ["core.export.markdown"] = {
+            config = {
+                extensions = "all",
+            },
+        },
 
         ["core.presenter"] = {
             config = {
