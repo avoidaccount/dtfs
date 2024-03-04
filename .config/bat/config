@@ -1,6 +1,6 @@
 --theme=mocha
 
---style=numbers
+--style=header,numbers,rule
 
 --decorations=always
 

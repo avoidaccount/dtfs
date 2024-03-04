@@ -10,3 +10,4 @@ indent_size = 4
 
 [*.norg]
 indent_size = unset
+

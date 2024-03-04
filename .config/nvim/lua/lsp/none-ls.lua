@@ -17,9 +17,15 @@ none.setup({
         }),
 
         none.builtins.diagnostics.editorconfig_checker,
-        none.builtins.diagnostics.markdownlint,
 
-        none.builtins.diagnostics.proselint.with({
+        none.builtins.diagnostics.markdownlint.with({
+            extra_args = {
+                "--config",
+                vim.fn.expand("$XDG_CONFIG_HOME/.utilities/markdownlint.yaml"),
+            },
+        }),
+
+       none.builtins.diagnostics.proselint.with({
             extra_filetypes = {
                 "norg",
             },
