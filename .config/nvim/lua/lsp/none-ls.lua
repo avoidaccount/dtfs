@@ -25,7 +25,7 @@ none.setup({
             },
         }),
 
-       none.builtins.diagnostics.proselint.with({
+        none.builtins.diagnostics.proselint.with({
             extra_filetypes = {
                 "norg",
             },
