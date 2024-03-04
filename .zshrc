@@ -218,4 +218,3 @@ eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-

@@ -96,7 +96,7 @@ opt.swapfile = true
 opt.termguicolors = true
 
 -- time delay for recognizing key sequences
-opt.timeoutlen = 500
+opt.timeoutlen = 1000
 
 -- persistent undo (see :h undo-tree)
 opt.undofile = true
