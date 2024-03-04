@@ -29,7 +29,7 @@ source "$HOME"/.zshrc
 
 apt purge -y nano && pkg upgrade -y
 
-nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang jql man maxcso navi nerdfix p7zip pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
+nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang man maxcso navi nerdfix p7zip pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab topgrade w3m w3m-img wget which zoxide
 
 git clone "https://github.com/avoidaccount/dtfs"
 
