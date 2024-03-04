@@ -17,9 +17,10 @@ mkdir "$HOME"/.shplugins
 git clone "https://github.com/Aloxaf/fzf-tab" &&
     git clone "https://github.com/zsh-users/zsh-syntax-highlighting" &&
     git clone "https://github.com/hlissner/zsh-autopair" &&
-    git clone "https://github.com/zsh-users/zsh-autosuggestions"
+    git clone "https://github.com/zsh-users/zsh-autosuggestions" &&
+    git clone "https://github.com/joshskidmore/zsh-fzf-history-search"
 
-mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions "$HOME/.shplugins" &&
+mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-history-search "$HOME/.shplugins" &&
     git clone "https://github.com/catppuccin/zsh-syntax-highlighting" &&
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
@@ -45,7 +46,7 @@ pip install --no-input beautifulsoup4 pipx pylast pyyaml requests
 pipx install beets proselint pyright qobuz-dl yamlfix yamllint yt-dlp &&
     pipx install "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
 
-pipx inject gallery-dl pyyaml &&
+pipx inject gallery-dl pyyaml yt-dlp &&
     pipx inject beets beautifulsoup4 pylast requests
 
 cargo install cargo-update shellharden stylua taplo-cli typos-cli

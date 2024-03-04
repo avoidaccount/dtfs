@@ -64,6 +64,8 @@ export YAMLFIX_INDENT_MAPPING=4
 export YAMLFIX_INDENT_OFFSET=4
 export YAMLFIX_QUOTE_REPRESENTATION='"'
 
+export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
+
 # fallback for creating a new bare repo
 function _dotfiles() {
     git --git-dir="$HOME"/.dtf/ --work-tree="$HOME" "$@"
@@ -210,6 +212,7 @@ source "$HOME"/.shplugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-hi
 source "$HOME"/.shplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source "$HOME"/.shplugins/zsh-autopair/autopair.zsh
 source "$HOME"/.shplugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source "$HOME"/.shplugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
 
 eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"
