@@ -4,7 +4,7 @@ zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
 compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 promptinit
 
-export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/etc/profile.d/texlive.sh:/data/data/com.termux/files/usr/share/texlive/bin/aarch64-linux:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
+export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/share/texlive/bin/aarch64-linux:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
 
 export EDITOR=nvim
 export LANG=en_US.UTF-8
@@ -213,6 +213,8 @@ source "$HOME"/.shplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin
 source "$HOME"/.shplugins/zsh-autopair/autopair.zsh
 source "$HOME"/.shplugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source "$HOME"/.shplugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
+
+source /data/data/com.termux/files/usr/etc/profile.d/texlive.sh
 
 eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"
