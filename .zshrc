@@ -4,7 +4,7 @@ zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
 compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
 promptinit
 
-export PATH=/data/data/com.termux/files/usr/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
+export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/etc/profile.d/texlive.sh:/data/data/com.termux/files/usr/share/texlive/bin/aarch64-linux:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
 
 export EDITOR=nvim
 export LANG=en_US.UTF-8
@@ -71,87 +71,87 @@ export YAMLFIX_QUOTE_REPRESENTATION='"'
 export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 
 # fallback for creating a new bare repo
-function _dotfiles() {
+_dotfiles() {
     git --git-dir="$HOME"/.dtf/ --work-tree="$HOME" "$@"
 }
 
-function dotfiles() {
+dotfiles() {
     gitui --directory "$HOME"/.dtf/ --workdir "$HOME" "$@"
 }
 
-function cop() {
+cop() {
     cp --interactive --recursive --verbose "$@"
 }
 
-function mdi() {
+mdi() {
     mkdir --parents --verbose "$@"
 }
 
-function mov() {
+mov() {
     mv --interactive --verbose "$@"
 }
 
-function rem() {
+rem() {
     rm --force --recursive --verbose "$@"
 }
 
-function delete-empty-dirs() {
+delete-empty-dirs() {
     find "$@" -type d -empty -delete -print
 }
 
-function find-broken-symlinks() {
+find-broken-symlinks() {
     find "$@" -type l ! -exec test -e {} \; -print
 }
 
-function tcr() {
+tcr() {
     tar --auto-compress --create --verbose --file="$@"
 }
 
-function l() {
+l() {
     eza --all --group-directories-first --hyperlink --long --sort=extension "$@"
 }
 
-function ls() {
+ls() {
     eza --all --group-directories-first --hyperlink --sort=extension "$@"
 }
 
-function lt() {
+lt() {
     eza --all --group-directories-first --hyperlink --level 2 --sort=extension --tree "$@"
 }
 
-function autodl-with-gdl() {
+autodl-with-gdl() {
     gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.txt ;
     termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
-function batch-rename-pattern() {
+batch-rename-pattern() {
     rnr --force --no-dump --recursive --replace-limit=0 "$@"
 }
 
-function dups-remove() {
+dups-remove() {
     fclones group "$@" | fclones remove
 }
 
-function gdl() {
+gdl() {
     gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@" ;
     termux-media-scan -r "/storage/emulated/0/gdl"
 }
 
-function gdrive-file-dl() {
+gdrive-file-dl() {
     gdown --fuzzy --output "/storage/emulated/0/Download" "$@"
 }
 
-function gdrive-folder-dl() {
+gdrive-folder-dl() {
     gdown --folder --output "/storage/emulated/0/Download" "$@"
 }
 
-function mdlint() {
+mdlint() {
     markdownlint --config "$XDG_CONFIG_HOME"/.utilities/markdownlint.yaml --json --output ".tmplint.json" "$@" ;
         bat ".tmplint.json" ;
         rm ".tmplint.json"
 }
 
-function sync-with-proton() {
+sync-with-proton() {
     rclone sync "$XDG_CONFIG_HOME"/.utilities/gallery-dl "proton:dotdroid/.utilities/gallery-dl" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/state.pickle "proton:dotdroid/beets" &&
@@ -163,15 +163,15 @@ function sync-with-proton() {
         rclone sync "/storage/emulated/0/tcc" "proton:archive/tcc"
 }
 
-function swap-dashes-with-spaces() {
+swap-dashes-with-spaces() {
     rnr --force --no-dump --recursive --replace-limit=0 "-" " " "$@"
 }
 
-function zarchive() {
+zarchive() {
     7z a -mx=0 "$@"
 }
 
-function zxtract() {
+zxtract() {
     7z x -y "$@"
 }
 
