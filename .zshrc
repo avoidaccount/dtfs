@@ -129,7 +129,8 @@ batch-rename-pattern() {
 }
 
 dups-remove() {
-    fclones group "$@" | fclones remove
+    fclones group "$@" |
+        fclones remove
 }
 
 gdl() {
@@ -147,8 +148,8 @@ gdrive-folder-dl() {
 
 mdlint() {
     markdownlint --config "$XDG_CONFIG_HOME"/.utilities/markdownlint.yaml --json --output ".tmplint.json" "$@" ;
-        bat ".tmplint.json" ;
-        rm ".tmplint.json"
+    bat ".tmplint.json" ;
+    rm ".tmplint.json"
 }
 
 sync-with-proton() {
@@ -161,10 +162,6 @@ sync-with-proton() {
         rclone sync "$XDG_CONFIG_HOME"/qobuz-dl "proton:dotdroid/qobuz-dl" &&
         rclone sync "$HOME"/wikimyro "proton:wikimyro" &&
         rclone sync "/storage/emulated/0/tcc" "proton:archive/tcc"
-}
-
-swap-dashes-with-spaces() {
-    rnr --force --no-dump --recursive --replace-limit=0 "-" " " "$@"
 }
 
 zarchive() {
