@@ -1,4 +1,9 @@
-export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/share/texlive/bin/aarch64-linux:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/ltex-ls/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
+export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/share/texlive/bin/aarch64-linux:\
+"$HOME"/.local/share/cargo/bin:\
+"$HOME"/.local/share/go/bin:\
+"$HOME"/.local/share/ltex-ls/bin:\
+"$HOME"/.local/share/npm/bin:\
+"$HOME"/.local/share/pipx/bin
 
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config
