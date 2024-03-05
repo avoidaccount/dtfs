@@ -4,6 +4,7 @@
 --hidden
 
 --glob=!.cache
+--glob=!.dtf
 --glob=!.git
 --glob=!.local
 --glob=!.termux
