@@ -1,22 +1,22 @@
-autoload -Uz compinit promptinit
-[ -d ~/.cache/zsh ] || mkdir -p ~/.cache/zsh
-zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
-compinit -d ~/.cache/zsh/zcompdump-"$ZSH_VERSION"
-promptinit
-
 export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/share/texlive/bin/aarch64-linux:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/ltex-ls/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
-
-export EDITOR=nvim
-export LANG=en_US.UTF-8
-export VISUAL=nvim
-# necessary for starship on android
-export USER=darumyro
 
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_RUNTIME_DIR=/run/user/"$UID"
 export XDG_STATE_HOME="$HOME"/.local/state
+
+autoload -Uz compinit promptinit
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+promptinit
+
+export EDITOR=nvim
+export LANG=en_US.UTF-8
+export VISUAL=nvim
+# necessary for starship on android
+export USER=darumyro
 
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
