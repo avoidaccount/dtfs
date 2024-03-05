@@ -51,7 +51,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
         group_empty = false,
         full_name = false,
         root_folder_label = ":~:s?$?/..?",
-        indent_width = 4,
+        indent_width = 2,
 
         special_files = {
             "Cargo.toml",

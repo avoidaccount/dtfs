@@ -12,26 +12,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    "goolord/alpha-nvim",
+    "akinsho/bufferline.nvim",
+    "stevearc/dressing.nvim",
+    -- "Bekaboo/dropbar.nvim",
+    "edluffy/hologram.nvim",
+    -- "lewis6991/satellite.nvim",
+    "xiyaowong/transparent.nvim",
+
+    "nvim-lualine/lualine.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "dstein64/nvim-scrollview",
+
     {
-        "goolord/alpha-nvim",
-        "akinsho/bufferline.nvim",
-        "stevearc/dressing.nvim",
-        -- "Bekaboo/dropbar.nvim",
-        "edluffy/hologram.nvim",
-        -- "lewis6991/satellite.nvim",
-        "xiyaowong/transparent.nvim",
-
-        "nvim-lualine/lualine.nvim",
-        "nvim-tree/nvim-web-devicons",
-        "dstein64/nvim-scrollview",
-
-        {
-            "nvim-treesitter/nvim-treesitter",
-            build = ":TSUpdate",
-        },
-
-        "nvim-treesitter/nvim-treesitter-context",
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
     },
+
+    "nvim-treesitter/nvim-treesitter-context",
 
     {
         "hrsh7th/nvim-cmp",
@@ -52,15 +50,13 @@ local plugins = {
     },
 
     {
-        {
-            "catppuccin/nvim",
-            name = "catppuccin",
-        },
-
-        "rebelot/kanagawa.nvim",
-        "navarasu/onedark.nvim",
-        "folke/tokyonight.nvim",
+        "catppuccin/nvim",
+        name = "catppuccin",
     },
+
+    "rebelot/kanagawa.nvim",
+    "navarasu/onedark.nvim",
+    "folke/tokyonight.nvim",
 
     {
 

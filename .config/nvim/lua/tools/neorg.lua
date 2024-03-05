@@ -9,7 +9,11 @@ require("neorg").setup({
             },
         },
 
-        ["core.concealer"] = {},
+        ["core.concealer"] = {
+            config = {
+                icon_preset = "diamond",
+            },
+        },
 
         ["core.dirman"] = {
             config = {
@@ -22,6 +26,7 @@ require("neorg").setup({
         },
 
         ["core.export"] = {},
+
         ["core.export.markdown"] = {
             config = {
                 extensions = "all",
