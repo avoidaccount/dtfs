@@ -30,7 +30,7 @@ curl "https://raw.githubusercontent.com/avoidaccount/dtfs/main/.zshrc" >"$HOME"/
 
 source "$HOME"/.zshrc
 
-nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang man maxcso navi nerdfix p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade w3m w3m-img wget which zoxide &&
+nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang man maxcso navi nerdfix openjdk-17 p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade w3m w3m-img wget which zoxide &&
     nala remove -y nano
 
 git clone "https://github.com/avoidaccount/dtfs" &&
