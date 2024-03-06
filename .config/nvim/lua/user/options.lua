@@ -56,9 +56,6 @@ opt.incsearch = true
 -- global statusline
 opt.laststatus = 3
 
--- show hide characters
-opt.list = true
-
 -- enable mouse mode
 opt.mouse = "a"
 
@@ -75,7 +72,7 @@ opt.pumheight = 10
 opt.relativenumber = true
 
 -- lines of context
-opt.scrolloff = 4
+opt.scrolloff = 8
 
 -- show matching brackets
 opt.showmatch = true
@@ -105,4 +102,4 @@ opt.undofile = true
 opt.updatetime = 200
 
 -- enable line wrap
-opt.wrap = true
+opt.wrap = false
