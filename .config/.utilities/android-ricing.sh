@@ -39,12 +39,10 @@ git clone "https://github.com/avoidaccount/dtfs" &&
     mv "$HOME"/dtfs/.editorconfig "$HOME" &&
     rm -rf "$HOME"/dtfs
 
-pip install --no-input beautifulsoup4 pipx pylast pyyaml requests
-
-pipx install beets proselint pyright qobuz-dl yamlfix yamllint yt-dlp &&
-    pipx install "https://github.com/mikf/gallery-dl/archive/master.tar.gz"
-
-pipx inject gallery-dl pyyaml yt-dlp &&
+pip install --no-input beautifulsoup4 pipx pylast pyyaml requests &&
+    pipx install beets proselint pyright qobuz-dl yamlfix yamllint yt-dlp &&
+    pipx install "https://github.com/mikf/gallery-dl/archive/master.tar.gz" &&
+    pipx inject gallery-dl pyyaml yt-dlp &&
     pipx inject beets beautifulsoup4 pylast requests
 
 git clone "https://github.com/beetbox/beets" &&
