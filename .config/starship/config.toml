@@ -8,8 +8,9 @@ $character
 """
 
 [character]
-    error_symbol   = "❌"
-    success_symbol = "🚀"
+    error_symbol   = "🔴"
+    success_symbol = "🔶"
+    vimcmd_symbol  = "⚪"
 
 [directory]
     format            = "[$path]($style) "
