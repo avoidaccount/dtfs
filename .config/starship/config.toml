@@ -8,17 +8,17 @@ $character
 """
 
 [character]
-    error_symbol   = "🔴"
-    success_symbol = "🔶"
-    vimcmd_symbol  = "⚪"
+    error_symbol   = "[⚡](red bold)"
+    success_symbol = "[⚡](yellow bold)"
+    vimcmd_symbol  = "[⚡](lavender bold)"
 
 [directory]
     format            = "[$path]($style) "
-    style             = "sapphire italic"
+    style             = "sapphire bold italic"
     truncation_length = 4
 
 [username]
-    format      = "[$user]($style) [>](rosewater bold) "
+    format      = "[$user]($style) [>](peach bold) "
     show_always = true
     style_root  = "red bold"
     style_user  = "mauve bold"
