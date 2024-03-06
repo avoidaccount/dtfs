@@ -1,17 +1,26 @@
 "$schema" = "https://starship.rs/config-schema.json"
 palette   = "catppuccin_mocha"
 
+format = """
+$username\
+$directory\
+$character
+"""
+
 [character]
-    error_symbol   = "[>> 🚀](bold red)"
-    success_symbol = "[>> 🚀](bold green)"
+    error_symbol   = "❌"
+    success_symbol = "🚀"
 
 [directory]
-    style             = "italic maroon"
+    format            = "[$path]($style) "
+    style             = "sapphire italic"
     truncation_length = 4
 
 [username]
+    format      = "[$user]($style) [>](rosewater bold) "
     show_always = true
-    style_user  = "bold mauve"
+    style_root  = "red bold"
+    style_user  = "mauve bold"
 
 [palettes.catppuccin_mocha]
     base      = "#1e1e2e"
@@ -40,4 +49,3 @@ palette   = "catppuccin_mocha"
     teal      = "#94e2d5"
     text      = "#cdd6f4"
     yellow    = "#f9e2af"
-
