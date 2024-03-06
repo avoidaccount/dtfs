@@ -11,9 +11,7 @@ none.setup({
         }),
 
         none.builtins.code_actions.proselint.with({
-            extra_filetypes = {
-                "norg",
-            },
+            extra_filetypes = { "norg" },
         }),
 
         none.builtins.diagnostics.editorconfig_checker,
@@ -26,9 +24,7 @@ none.setup({
         }),
 
         none.builtins.diagnostics.proselint.with({
-            extra_filetypes = {
-                "norg",
-            },
+            extra_filetypes = { "norg" },
         }),
 
         none.builtins.diagnostics.selene,
@@ -42,28 +38,19 @@ none.setup({
         }),
 
         none.builtins.formatting.shellharden.with({
-            extra_args = {
-                "--transform",
-            },
-
-            extra_filetypes = {
-                "zsh",
-            },
+            extra_args = { "--transform" },
+            extra_filetypes = { "zsh" },
         }),
 
         none.builtins.formatting.shfmt.with({
-            extra_filetypes = {
-                "zsh",
-            },
+            extra_filetypes = { "zsh" },
         }),
 
         none.builtins.formatting.stylua,
         none.builtins.formatting.yamlfix,
 
         none.builtins.hover.dictionary.with({
-            extra_filetypes = {
-                "norg",
-            },
+            extra_filetypes = { "norg" },
         }),
 
         none.builtins.hover.printenv,
