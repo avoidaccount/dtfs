@@ -100,6 +100,3 @@ opt.undofile = true
 
 -- save swap file and trigger CursorHold
 opt.updatetime = 200
-
--- enable line wrap
-opt.wrap = false
