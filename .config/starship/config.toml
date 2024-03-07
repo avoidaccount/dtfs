@@ -4,7 +4,9 @@ palette   = "catppuccin_mocha"
 format = """
 $username\
 $directory\
-$character
+$character\
+$git_branch\
+$git_status
 """
 
 [character]
@@ -18,7 +20,7 @@ $character
     truncation_length = 4
 
 [username]
-    format      = "[$user]($style) [>](peach bold) "
+    format      = "[$user]($style) "
     show_always = true
     style_root  = "red bold"
     style_user  = "mauve bold"
