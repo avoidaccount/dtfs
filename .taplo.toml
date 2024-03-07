@@ -4,5 +4,4 @@
     indent_string    = "    "
     indent_tables    = true
     reorder_keys     = true
-    trailing_newline = true
-
+    trailing_newline = false
