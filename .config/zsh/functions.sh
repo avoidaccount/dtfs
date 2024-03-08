@@ -53,7 +53,8 @@ batch-rename-pattern() {
 }
 
 check-xdg-dirs() {
-    git clone "https://github.com/b3nj5m1n/xdg-ninja" &&
+    clean &&
+        git clone --quiet "https://github.com/b3nj5m1n/xdg-ninja" &&
         cd xdg-ninja &&
         ./xdg-ninja.sh
     cd .. &&
