@@ -7,7 +7,8 @@ cd "$HOME"
 pkg upgrade -y &&
     pkg install -y zsh neovim rclone git nodejs python python-pip nala curl
 
-echo 'export ZDOTDIR="$HOME"/.config/zsh' >/data/data/com.termux/files/usr/etc/zshrc
+touch /data/data/com.termux/files/usr/etc/zshenv &&
+    echo 'export ZDOTDIR="$HOME"/.config/zsh' >/data/data/com.termux/files/usr/etc/zshenv
 
 if [[ -d "$HOME"/.config ]]; then
     echo "XDG_CONFIG_HOME already exists"
@@ -27,10 +28,6 @@ mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-hist
     git clone "https://github.com/catppuccin/zsh-syntax-highlighting" &&
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
-
-curl "https://raw.githubusercontent.com/avoidaccount/dtfs/main/.zshrc" >"$HOME"/.zshrc
-
-source "$HOME"/.zshrc
 
 nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang man maxcso navi nerdfix openjdk-17 openjdk-17-source p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade w3m w3m-img wget which zoxide &&
     nala remove -y nano
@@ -52,7 +49,7 @@ git clone "https://github.com/beetbox/beets" &&
     nala --install-completion zsh &&
     mv "$HOME"/.zfunc/_nala /data/data/com.termux/files/usr/share/zsh/site-functions &&
     rm -rf "$HOME"/.zfunc &&
-    sd "fpath\+=~/.zfunc" "" "$HOME"/.zshrc
+    sd "fpath\+=~/.zfunc" "" "$HOME"/.config/zsh/.zshrc
 
 cargo install cargo-update shellharden stylua taplo-cli typos-cli
 
