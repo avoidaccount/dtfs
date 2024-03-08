@@ -40,7 +40,7 @@ git clone "https://github.com/avoidaccount/dtfs" &&
     rm -rf "$HOME"/dtfs
 
 pip install --no-input beautifulsoup4 pipx pylast pyyaml requests &&
-    pipx install beets proselint pyright qobuz-dl yamlfix yamllint yt-dlp &&
+    pipx install beets pyright qobuz-dl yamlfix yamllint yt-dlp &&
     pipx install "https://github.com/mikf/gallery-dl/archive/master.tar.gz" &&
     pipx inject gallery-dl pyyaml yt-dlp &&
     pipx inject beets beautifulsoup4 pylast requests
@@ -57,9 +57,7 @@ cargo install cargo-update shellharden stylua taplo-cli typos-cli
 go install "github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorconfig-checker@latest" "mvdan.cc/sh/v3/cmd/shfmt@latest"
 
 npm install bash-language-server markdownlint-cli textlint vscode-langservers-extracted yaml-language-server &&
-    npm install textlint-rule-no-todo textlint-rule-no-start-duplicated-conjunction textlint-rule-max-comma textlint-rule-editorconfig textlint-rule-no-empty-section textlint-rule-no-empty-element textlint-rule-date-weekday-mismatch textlint-rule-period-in-list-item textlint-rule-period-in-header @textlint-rule/textlint-rule-no-invalid-control-character  textlint-rule-footnote-order textlint-rule-max-doc-width textlint-rule-doubled-spaces @textlint-rule/textlint-rule-no-duplicate-abbr textlint-rule-unexpanded-acronym textlint-rule-abbr-within-parentheses textlint-rule-common-misspellings textlint-rule-apostrophe  textlint-filter-rule-comments textlint-plugin-html textlint-plugin-latex2e
-
-textlint-rule-terminology
+    npm install textlint-rule-no-todo textlint-rule-no-start-duplicated-conjunction textlint-rule-max-comma textlint-rule-no-empty-section textlint-rule-no-empty-element textlint-rule-date-weekday-mismatch textlint-rule-period-in-list-item textlint-rule-period-in-header textlint-rule-footnote-order textlint-rule-doubled-spaces textlint-rule-apostrophe textlint-filter-rule-comments textlint-plugin-html textlint-plugin-latex2e
 
 rm /data/data/com.termux/files/usr/etc/motd
 

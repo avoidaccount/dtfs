@@ -5,8 +5,22 @@ lspconfig.cssls.setup({})
 lspconfig.eslint.setup({})
 lspconfig.html.setup({})
 lspconfig.jsonls.setup({})
-lspconfig.ltex.setup({})
-lspconfig.marksman.setup({})
+
+lspconfig.ltex.setup({
+    settings = {
+        ltex = {
+            dictionary = {
+                ["en-US"] = {
+                    "UnrealEssencials",
+                    "Yukari",
+                    "Raidou",
+                },
+            },
+        },
+    },
+})
+
+-- lspconfig.marksman.setup({})
 lspconfig.pyright.setup({})
 lspconfig.taplo.setup({})
 lspconfig.texlab.setup({})

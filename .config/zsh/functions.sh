@@ -52,6 +52,14 @@ batch-rename-pattern() {
     rnr --force --no-dump --recursive --replace-limit=0 "$@"
 }
 
+check-xdg-dirs() {
+    git clone "https://github.com/b3nj5m1n/xdg-ninja" &&
+        cd xdg-ninja &&
+        ./xdg-ninja.sh
+    cd .. &&
+        rm -rf "xdg-ninja"
+}
+
 dups-remove() {
     fclones group "$@" |
         fclones remove
