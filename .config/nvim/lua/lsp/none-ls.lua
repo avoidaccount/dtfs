@@ -10,11 +10,7 @@ none.setup({
             },
         }),
 
-        none.builtins.code_actions.proselint.with({
-            extra_filetypes = { "norg" },
-        }),
-
-        none.builtins.diagnostics.editorconfig_checker,
+        -- none.builtins.code_actions.proselint,
 
         none.builtins.diagnostics.markdownlint.with({
             extra_args = {
@@ -23,19 +19,12 @@ none.setup({
             },
         }),
 
-        none.builtins.diagnostics.proselint.with({
-            extra_filetypes = { "norg" },
-        }),
-
+        -- none.builtins.diagnostics.proselint,
         none.builtins.diagnostics.selene,
+        none.builtins.diagnostics.textlint,
         none.builtins.diagnostics.yamllint,
 
-        none.builtins.formatting.markdownlint.with({
-            extra_args = {
-                "--config",
-                vim.fn.expand("$XDG_CONFIG_HOME/.utilities/markdownlint.yaml"),
-            },
-        }),
+        none.builtins.formatting.markdownlint,
 
         none.builtins.formatting.shellharden.with({
             extra_args = { "--transform" },
@@ -47,12 +36,10 @@ none.setup({
         }),
 
         none.builtins.formatting.stylua,
+        none.builtins.formatting.textlint,
         none.builtins.formatting.yamlfix,
 
-        none.builtins.hover.dictionary.with({
-            extra_filetypes = { "norg" },
-        }),
-
+        none.builtins.hover.dictionary,
         none.builtins.hover.printenv,
     },
 })

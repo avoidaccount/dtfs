@@ -31,10 +31,6 @@ find-broken-symlinks() {
     find "$@" -type l ! -exec test -e {} \; -print
 }
 
-tcr() {
-    tar --auto-compress --create --verbose --file="$@"
-}
-
 l() {
     eza --all --group-directories-first --hyperlink --long --sort=extension "$@"
 }
@@ -44,7 +40,7 @@ ls() {
 }
 
 lt() {
-    eza --all --group-directories-first --hyperlink --level 2 --sort=extension --tree "$@"
+    eza --all --group-directories-first --hyperlink --sort=extension --tree "$@"
 }
 
 autodl-with-gdl() {
@@ -89,7 +85,7 @@ sync-with-proton() {
         rclone sync "$XDG_CONFIG_HOME"/git "proton:dotdroid/git" &&
         rclone sync "$XDG_CONFIG_HOME"/qobuz-dl "proton:dotdroid/qobuz-dl" &&
         rclone sync "$HOME"/wikimyro "proton:wikimyro" &&
-        rclone sync "/storage/emulated/0/tcc" "proton:archive/tcc"
+        rclone sync "$HOME"/tcc "proton:archive/tcc"
 }
 
 zarchive() {

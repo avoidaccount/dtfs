@@ -1,9 +1,11 @@
-export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/share/texlive/bin/aarch64-linux:\
+export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/share/texlive/bin:\
 "$HOME"/.local/share/cargo/bin:\
 "$HOME"/.local/share/go/bin:\
 "$HOME"/.local/share/ltex-ls/bin:\
 "$HOME"/.local/share/npm/bin:\
 "$HOME"/.local/share/pipx/bin
+
+source /data/data/com.termux/files/usr/etc/profile.d/texlive.sh
 
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -76,7 +78,6 @@ export YAMLFIX_QUOTE_REPRESENTATION='"'
 export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 
 source "$XDG_CONFIG_HOME"/zsh/functions.sh
-source /data/data/com.termux/files/usr/etc/profile.d/texlive.sh
 
 setopt auto_cd
 setopt auto_list
