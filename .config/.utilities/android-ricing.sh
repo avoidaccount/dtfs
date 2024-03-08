@@ -7,6 +7,8 @@ cd "$HOME"
 pkg upgrade -y &&
     pkg install -y zsh neovim rclone git nodejs python python-pip nala curl
 
+echo 'export ZDOTDIR="$HOME"/.config/zsh' >/data/data/com.termux/files/usr/etc/zshrc
+
 if [[ -d "$HOME"/.config ]]; then
     echo "XDG_CONFIG_HOME already exists"
 else
@@ -67,4 +69,5 @@ termux-reload-settings &&
     topgrade &&
     cd &&
     clear &&
-    history clean
+    history clean &&
+    chsh -s zsh
