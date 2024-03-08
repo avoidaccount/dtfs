@@ -58,6 +58,7 @@ require("telescope").setup({
 
     pickers = {
         find_files = {
+            dotfiles = true,
             theme = "ivy",
         },
     },
