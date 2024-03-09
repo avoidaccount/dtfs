@@ -7,17 +7,17 @@ lspconfig.html.setup({})
 lspconfig.jsonls.setup({})
 
 lspconfig.ltex.setup({
-    settings = {
-        ltex = {
-            dictionary = {
-                ["en-US"] = {
-                    "UnrealEssencials",
-                    "Yukari",
-                    "Raidou",
-                },
-            },
-        },
-    },
+    on_attach = function(client, bufnr)
+        require("ltex_extra").setup({
+            -- table <string> : languages for witch dictionaries will be loaded, e.g. { "es-AR", "en-US" }
+            -- https://valentjn.github.io/ltex/supported-languages.html#natural-languages
+            load_langs = { "en-US" }, -- en-US as default
+            init_check = true,
+            path = vim.fn.expand("$XDG_CONFIG_HOME/.utilities/ltex"),
+            log_level = "info",
+            server_opts = nil,
+        })
+    end,
 })
 
 -- lspconfig.marksman.setup({})

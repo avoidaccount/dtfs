@@ -47,6 +47,7 @@ local plugins = {
         "neovim/nvim-lspconfig",
         "NvChad/nvterm",
         "folke/trouble.nvim",
+        "barreiroleo/ltex_extra.nvim",
     },
 
     {

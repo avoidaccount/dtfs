@@ -17,6 +17,7 @@ require("lsp.lsp")
 require("lsp.none-ls")
 require("lsp.nvterm")
 require("lsp.trouble")
+-- require("lsp.ltex-extra")
 
 require("schemes.catppuccin")
 -- require("schemes.kanagawa")
