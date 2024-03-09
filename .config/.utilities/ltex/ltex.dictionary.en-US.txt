@@ -14,3 +14,4 @@ Sae
 Kasumi
 Atlus
 DeathChaos
+yukari

@@ -7,8 +7,8 @@ cd "$HOME"
 pkg upgrade -y &&
     pkg install -y zsh neovim rclone git nodejs python python-pip nala curl
 
-touch /data/data/com.termux/files/usr/etc/zshenv &&
-    echo 'export ZDOTDIR="$HOME"/.config/zsh' >/data/data/com.termux/files/usr/etc/zshenv
+touch "$PREFIX"/etc/zshenv &&
+    echo 'export ZDOTDIR="$HOME"/.config/zsh' >"$PREFIX"/etc/zshenv
 
 if [[ -d "$HOME"/.config ]]; then
     echo "XDG_CONFIG_HOME already exists"
@@ -33,7 +33,7 @@ nala install -y android-tools ani-cli aria2 bat binutils busybox difftastic dust
     nala remove -y nano
 
 git clone "https://github.com/dylanaraps/pfetch" &&
-    mv "$HOME"/pfetch/pfetch /data/data/com.termux/files/usr/bin &&
+    mv "$HOME"/pfetch/pfetch "$PREFIX"/bin &&
     rm -rf "$HOME"/pfetch
 
 git clone "https://github.com/avoidaccount/dtfs" &&
@@ -49,9 +49,9 @@ pip install --no-input beautifulsoup4 pipx pylast pyyaml requests &&
     pipx inject beets beautifulsoup4 pylast requests
 
 git clone "https://github.com/beetbox/beets" &&
-    mv "$HOME"/beets/extra/_beet /data/data/com.termux/files/usr/share/zsh/site-functions &&
+    mv "$HOME"/beets/extra/_beet "$PREFIX"/share/zsh/site-functions &&
     nala --install-completion zsh &&
-    mv "$HOME"/.zfunc/_nala /data/data/com.termux/files/usr/share/zsh/site-functions &&
+    mv "$HOME"/.zfunc/_nala "$PREFIX"/share/zsh/site-functions &&
     rm -rf "$HOME"/.zfunc &&
     sd "fpath\+=~/.zfunc" "" "$HOME"/.config/zsh/.zshrc
 
@@ -62,7 +62,7 @@ go install "github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorco
 npm install bash-language-server markdownlint-cli textlint vscode-langservers-extracted yaml-language-server &&
     npm install textlint-rule-no-todo textlint-rule-no-start-duplicated-conjunction textlint-rule-max-comma textlint-rule-no-empty-section textlint-rule-no-empty-element textlint-rule-date-weekday-mismatch textlint-rule-period-in-list-item textlint-rule-period-in-header textlint-rule-footnote-order textlint-rule-doubled-spaces textlint-rule-apostrophe textlint-filter-rule-comments textlint-plugin-html textlint-plugin-latex2e
 
-rm /data/data/com.termux/files/usr/etc/motd
+rm "$PREFIX"/etc/motd
 
 bat cache --build
 

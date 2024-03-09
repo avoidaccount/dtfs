@@ -69,7 +69,7 @@ opt.pumblend = 10
 opt.pumheight = 10
 
 -- enable relative line numbers
-opt.relativenumber = true
+-- opt.relativenumber = true
 
 -- lines of context
 opt.scrolloff = 8

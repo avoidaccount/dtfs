@@ -6,7 +6,7 @@ format = """
 $username\
 [](bg:#DA627D fg:#9A348E)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#DA627D bg:#33658A)\
 $git_branch\
 $git_status\
 [ ](fg:#33658A)\
@@ -19,15 +19,15 @@ $git_status\
 
 [git_branch]
     format = "[ $symbol $branch ]($style)"
-    style  = "bg:#FCA17D"
+    style  = "bg:#33658A"
     symbol = ""
 
 [git_status]
     format = "[$all_status$ahead_behind ]($style)"
-    style  = "bg:#FCA17D"
+    style  = "bg:#33658A"
 
 [username]
-    format      = "[⚡ $user]($style)"
+    format      = "[🚀 $user ]($style)"
     show_always = true
     style_root  = "bg:#9A348E"
     style_user  = "bg:#9A348E"

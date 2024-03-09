@@ -1,0 +1,1 @@
+{"rule":"CD_NN","sentence":"^\\Qcolorful pack 01 colorful pack 02 colorful pack 03\\E$"}
