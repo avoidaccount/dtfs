@@ -30,7 +30,7 @@ setopt histverify
 setopt incappendhistory
 setopt sharehistory
 
-source "$HOME"/.shplugins/fzf-tab/fzf-tab.plugin.zsh
+source "$ZPLUGINS"/fzf-tab/fzf-tab.plugin.zsh
 
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
@@ -45,11 +45,11 @@ zstyle ':completion:*' rehash true
 
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-source "$HOME"/.shplugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
-source "$HOME"/.shplugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source "$HOME"/.shplugins/zsh-autopair/autopair.zsh
-source "$HOME"/.shplugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source "$HOME"/.shplugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
+source "$ZPLUGINS"/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source "$ZPLUGINS"/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source "$ZPLUGINS"/zsh-autopair/autopair.zsh
+source "$ZPLUGINS"/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source "$ZPLUGINS"/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
 
 eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"

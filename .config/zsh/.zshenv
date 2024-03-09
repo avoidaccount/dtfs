@@ -10,6 +10,8 @@ export VISUAL=nvim
 # necessary for starship on android
 export USER=darumyro
 
+export ZPLUGINS="$HOME"/.shplugins
+
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
