@@ -95,7 +95,7 @@ sync-with-proton() {
         rclone sync "$XDG_CONFIG_HOME"/gallery-dl "proton:dotdroid/gallery-dl" &&
         rclone sync "$XDG_CONFIG_HOME"/git "proton:dotdroid/git" &&
         rclone sync "$XDG_CONFIG_HOME"/qobuz-dl "proton:dotdroid/qobuz-dl" &&
-        rclone sync "$HOME"/wikimyro "proton:wikimyro" &&
+        rclone sync "$KNOWLEDGE_BASE" "proton:wikimyro" &&
         rclone sync "$HOME"/tcc "proton:archive/tcc"
 }
 

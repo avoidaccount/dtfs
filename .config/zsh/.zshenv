@@ -8,8 +8,9 @@ export EDITOR=nvim
 export LANG=en_US.UTF-8
 export VISUAL=nvim
 # necessary for starship on android
-export USER=darumyro
+export USER=daru
 
+export KNOWLEDGE_BASE="$HOME"/wikimyro
 export ZPLUGINS="$HOME"/.shplugins
 
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
