@@ -16,7 +16,6 @@ $git_status\
     format            = "[ $path ]($style)"
     style             = "bg:#DA627D"
     truncation_length = 4
-    truncation_symbol = "…/"
 
 [git_branch]
     format = "[ $symbol $branch ]($style)"
@@ -28,7 +27,7 @@ $git_status\
     style  = "bg:#FCA17D"
 
 [username]
-    format      = "[$user]($style)"
+    format      = "[⚡ $user]($style)"
     show_always = true
     style_root  = "bg:#9A348E"
     style_user  = "bg:#9A348E"
