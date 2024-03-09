@@ -45,6 +45,8 @@ export FZF_DEFAULT_OPTS=" \
 # global pager
 export PAGER="nvim +Man!"
 
+export PF_INFO="ascii os host kernel shell pkgs wm de editor memory palette"
+
 export RCLONE_BUFFER_SIZE=512Mi
 export RCLONE_CHECK_FIRST=TRUE
 export RCLONE_CHECKSUM=TRUE

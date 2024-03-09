@@ -29,8 +29,12 @@ mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-hist
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
 
-nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fastfetch fclones fd fdupes ffmpeg flac fzf gh gitui glow golang hollywood man maxcso navi nerdfix openjdk-17 openjdk-17-source p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade w3m w3m-img wget which zoxide &&
+nala install -y android-tools aria2 bat binutils busybox difftastic dust exiftool eza fclones fd fdupes ffmpeg flac fzf gh gitui glow golang hollywood man maxcso navi nerdfix openjdk-17 openjdk-17-source p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade w3m w3m-img wget which zoxide &&
     nala remove -y nano
+
+git clone "https://github.com/dylanaraps/pfetch" &&
+    mv "$HOME"/pfetch/pfetch /data/data/com.termux/files/usr/bin &&
+    rm -rf "$HOME"/pfetch
 
 git clone "https://github.com/avoidaccount/dtfs" &&
     mv "$HOME"/dtfs/.zshrc "$HOME" &&
