@@ -2,28 +2,36 @@
 palette   = "catppuccin_mocha"
 
 format = """
+[](#9A348E)\
 $username\
+[](bg:#DA627D fg:#9A348E)\
 $directory\
-$character\
+[](fg:#DA627D bg:#FCA17D)\
 $git_branch\
-$git_status
+$git_status\
+[ ](fg:#33658A)\
 """
 
-[character]
-    error_symbol   = "[⚡](red bold)"
-    success_symbol = "[⚡](yellow bold)"
-    vimcmd_symbol  = "[⚡](lavender bold)"
-
 [directory]
-    format            = "[$path]($style) "
-    style             = "sapphire bold italic"
+    format            = "[ $path ]($style)"
+    style             = "bg:#DA627D"
     truncation_length = 4
+    truncation_symbol = "…/"
+
+[git_branch]
+    format = "[ $symbol $branch ]($style)"
+    style  = "bg:#FCA17D"
+    symbol = ""
+
+[git_status]
+    format = "[$all_status$ahead_behind ]($style)"
+    style  = "bg:#FCA17D"
 
 [username]
-    format      = "[$user]($style) "
+    format      = "[$user]($style)"
     show_always = true
-    style_root  = "red bold"
-    style_user  = "mauve bold"
+    style_root  = "bg:#9A348E"
+    style_user  = "bg:#9A348E"
 
 [palettes.catppuccin_mocha]
     base      = "#1e1e2e"
