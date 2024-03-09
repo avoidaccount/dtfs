@@ -9,26 +9,26 @@ promptinit
 
 source /data/data/com.termux/files/usr/etc/profile.d/texlive.sh
 
-setopt auto_cd
-setopt auto_list
-setopt interactive_comments
-setopt prompt_subst
+setopt autocd
+setopt autolist
+setopt interactivecomments
+setopt promptsubst
 
 HISTSIZE=10000
 SAVEHIST=10000
 
-setopt append_history
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_find_no_dups
-setopt hist_ignore_all_dups
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt hist_reduce_blanks
-setopt hist_save_no_dups
-setopt hist_verify
-setopt inc_append_history
-setopt share_history
+setopt appendhistory
+setopt extendedhistory
+setopt histexpiredupsfirst
+setopt histfindnodups
+setopt histignorealldups
+setopt histignoredups
+setopt histignorespace
+setopt histreduceblanks
+setopt histsavenodups
+setopt histverify
+setopt incappendhistory
+setopt sharehistory
 
 source "$HOME"/.shplugins/fzf-tab/fzf-tab.plugin.zsh
 
