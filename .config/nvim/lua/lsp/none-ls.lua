@@ -23,9 +23,7 @@ none.setup({
             extra_filetypes = { "zsh" },
         }),
 
-        none.builtins.formatting.shfmt.with({
-            extra_filetypes = { "zsh" },
-        }),
+        none.builtins.formatting.shfmt.with({ extra_filetypes = { "zsh" } }),
 
         none.builtins.formatting.stylua,
         none.builtins.formatting.textlint,
@@ -34,4 +32,7 @@ none.setup({
         none.builtins.hover.dictionary,
         none.builtins.hover.printenv,
     },
+
+    debug = true,
+    temp_dir = "$XDG_DATA_HOME/nvim/tmp_none-ls",
 })

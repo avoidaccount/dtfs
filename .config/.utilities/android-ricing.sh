@@ -61,7 +61,8 @@ cargo install cargo-update shellharden stylua taplo-cli typos-cli
 go install "github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorconfig-checker@latest" "mvdan.cc/sh/v3/cmd/shfmt@latest"
 
 npm install bash-language-server markdownlint-cli textlint vscode-langservers-extracted yaml-language-server &&
-    npm install textlint-rule-no-todo textlint-rule-no-start-duplicated-conjunction textlint-rule-max-comma textlint-rule-no-empty-section textlint-rule-no-empty-element textlint-rule-date-weekday-mismatch textlint-rule-period-in-list-item textlint-rule-period-in-header textlint-rule-footnote-order textlint-rule-doubled-spaces textlint-rule-apostrophe textlint-filter-rule-comments textlint-plugin-html textlint-plugin-latex2e &&
+    npm install textlint-rule-no-todo textlint-rule-no-start-duplicated-conjunction textlint-rule-max-comma textlint-rule-no-empty-section textlint-rule-no-empty-element &&
+    npm install textlint-rule-date-weekday-mismatch textlint-rule-period-in-list-item textlint-rule-period-in-header textlint-rule-footnote-order textlint-rule-doubled-spaces textlint-rule-apostrophe textlint-filter-rule-comments textlint-plugin-html textlint-plugin-latex2e &&
     npm uninstall markdown-to-ast txt-ast-traverse &&
     npm install @textlint/markdown-to-ast @textlint/ast-traverse
 
@@ -69,9 +70,9 @@ rm "$PREFIX"/etc/motd
 
 bat cache --build
 
+topgrade
+
 termux-reload-settings &&
-    topgrade &&
     cd &&
-    clear &&
     history clean &&
     chsh -s zsh

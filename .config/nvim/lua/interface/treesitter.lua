@@ -19,6 +19,7 @@ require("nvim-treesitter.configs").setup({
         "markdown",
         "markdown_inline",
         "norg",
+        "org",
         "python",
         "query",
         "ssh_config",
@@ -31,9 +32,7 @@ require("nvim-treesitter.configs").setup({
         use_languagetree = true,
     },
 
-    indent = {
-        enable = true,
-    },
+    indent = { enable = true },
 
     sync_install = true,
 })
