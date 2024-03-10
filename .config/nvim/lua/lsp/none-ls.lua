@@ -10,19 +10,11 @@ none.setup({
             },
         }),
 
-        -- none.builtins.code_actions.proselint,
-
-        none.builtins.diagnostics.markdownlint.with({
-            extra_args = {
-                "--config",
-                vim.fn.expand("$XDG_CONFIG_HOME/.utilities/markdownlint.yaml"),
-            },
-        }),
-
-        -- none.builtins.diagnostics.proselint,
+        none.builtins.diagnostics.markdownlint,
         none.builtins.diagnostics.selene,
         none.builtins.diagnostics.textlint,
         none.builtins.diagnostics.yamllint,
+        none.builtins.diagnostics.zsh,
 
         none.builtins.formatting.markdownlint,
 
