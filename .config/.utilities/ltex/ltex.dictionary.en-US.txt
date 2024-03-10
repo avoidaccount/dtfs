@@ -15,3 +15,4 @@ Kasumi
 Atlus
 DeathChaos
 yukari
+skinsuit
