@@ -29,19 +29,20 @@ mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-hist
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
 
-nala install -y android-tools ani-cli aria2 bat binutils busybox difftastic dust exiftool eza fclones fd fdupes ffmpeg flac fzf gh gitui glow golang hollywood &&
+nala install -y android-tools ani-cli aria2 bat binutils busybox difftastic dust exiftool eza fclones fd fdupes ffmpeg figlet flac fzf gh gitui glow golang hollywood &&
     nala install -y man maxcso navi nerdfix openjdk-17 openjdk-17-source p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade w3m w3m-img wget which zoxide &&
     nala remove -y nano
+
+git clone --depth 1 "https://github.com/xero/figlet-fonts" &&
+    mv "$HOME"/figlet-fonts/maxiwi.flf "$PREFIX"/share/figlet &&
+    rm -rf figlet-fonts
 
 git clone --depth 1 "https://github.com/dylanaraps/pfetch" &&
     mv "$HOME"/pfetch/pfetch "$PREFIX"/bin &&
     rm -rf "$HOME"/pfetch
 
-git clone --depth 1 "https://github.com/avoidaccount/dtfs" &&
-    mv "$HOME"/dtfs/.zshrc "$HOME" &&
-    mv -r "$HOME"/dtfs/.config "$HOME" &&
-    mv "$HOME"/dtfs/.editorconfig "$HOME" &&
-    rm -rf "$HOME"/dtfs
+git clone "https://github.com/avoidaccount/dtfs" &&
+    mv -r "$HOME"/dtfs/* "$HOME"
 
 pip install --no-input beautifulsoup4 pipx pylast pyyaml requests &&
     pipx install beets pyright qobuz-dl yamlfix yamllint yt-dlp &&
