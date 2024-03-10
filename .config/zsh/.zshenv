@@ -45,6 +45,7 @@ export FZF_DEFAULT_OPTS=" \
 # global pager
 export PAGER="nvim +Man!"
 
+# pfetch config
 export PF_INFO="ascii os host kernel shell pkgs wm de editor memory palette"
 
 export RCLONE_BUFFER_SIZE=512Mi
