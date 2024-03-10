@@ -15,7 +15,7 @@ $git_status\
 [directory]
     format            = "[ $path ]($style)"
     style             = "bg:#DA627D"
-    truncation_length = 4
+    truncation_length = 3
 
 [git_branch]
     format = "[ $symbol $branch ]($style)"
