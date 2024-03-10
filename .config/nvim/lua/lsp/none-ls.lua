@@ -34,5 +34,5 @@ none.setup({
     },
 
     debug = true,
-    temp_dir = "$XDG_DATA_HOME/nvim/tmp_none-ls",
+    temp_dir = vim.fn.expand("~/.local/share/nvim/tmp_none-ls"),
 })
