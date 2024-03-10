@@ -89,7 +89,7 @@ mdlint() {
 
 sync-with-proton() {
     rclone sync "$XDG_CONFIG_HOME"/.utilities/gallery-dl "proton:dotdroid/.utilities/gallery-dl" &&
-        rclone sync "$XDG_CONFIG_HOME"/.utilities/ltex &&
+        rclone sync "$XDG_CONFIG_HOME"/.utilities/ltex "proton:dotdroid/.utilities/ltex" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/state.pickle "proton:dotdroid/beets" &&
         rclone sync "$XDG_CONFIG_HOME"/fd "proton:dotdroid/fd" &&
