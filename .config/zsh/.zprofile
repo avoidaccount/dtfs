@@ -55,9 +55,9 @@ batch-rename-pattern() {
 }
 
 check-xdg-dirs() {
-    clean &&
-        git clone --quiet "https://github.com/b3nj5m1n/xdg-ninja" &&
+    git clone --depth 1 "https://github.com/b3nj5m1n/xdg-ninja" &&
         cd xdg-ninja &&
+        clean &&
         ./xdg-ninja.sh
     cd .. &&
         rm -rf "xdg-ninja"
@@ -89,6 +89,7 @@ mdlint() {
 
 sync-with-proton() {
     rclone sync "$XDG_CONFIG_HOME"/.utilities/gallery-dl "proton:dotdroid/.utilities/gallery-dl" &&
+        rclone sync "$XDG_CONFIG_HOME"/.utilities/ltex &&
         rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/state.pickle "proton:dotdroid/beets" &&
         rclone sync "$XDG_CONFIG_HOME"/fd "proton:dotdroid/fd" &&
