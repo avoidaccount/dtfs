@@ -1,6 +1,8 @@
 source "$ZDOTDIR"/.zshenv
 source "$ZDOTDIR"/.zprofile
 
+source "$PREFIX"/etc/profile.d/texlive.sh
+
 autoload -Uz compinit promptinit
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
@@ -12,8 +14,8 @@ setopt autolist
 setopt interactivecomments
 setopt promptsubst
 
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 
 setopt appendhistory
 setopt extendedhistory
@@ -42,8 +44,6 @@ source "$ZPLUGINS"/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source "$ZPLUGINS"/zsh-autopair/autopair.zsh
 source "$ZPLUGINS"/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source "$ZPLUGINS"/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
-
-source "$PREFIX"/etc/profile.d/texlive.sh
 
 eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"

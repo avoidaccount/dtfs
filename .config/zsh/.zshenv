@@ -7,7 +7,7 @@ export XDG_STATE_HOME="$HOME"/.local/state
 export EDITOR=nvim
 export LANG=en_US.UTF-8
 export VISUAL=nvim
-# necessary for starship on android
+# needed for starship on android
 export USER=daru
 
 export KNOWLEDGE_BASE="$HOME"/wikimyro
