@@ -65,12 +65,6 @@ gdrive-folder-dl() {
     gdown --folder --output "/storage/emulated/0/Download" "$@"
 }
 
-mdlint() {
-    markdownlint --config "$XDG_CONFIG_HOME"/.utilities/markdownlint.yaml --json --output ".tmplint.json" "$@"
-    bat ".tmplint.json"
-    rm ".tmplint.json"
-}
-
 sync-with-proton() {
     rclone sync "$XDG_CONFIG_HOME"/.utilities/gallery-dl "proton:dotdroid/.utilities/gallery-dl" &&
         rclone sync "$XDG_CONFIG_HOME"/.utilities/ltex "proton:dotdroid/.utilities/ltex" &&
