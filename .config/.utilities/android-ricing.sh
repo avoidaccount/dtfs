@@ -54,7 +54,7 @@ git clone --depth 1 "https://github.com/beetbox/beets" &&
     mv "$HOME"/beets/extra/_beet "$PREFIX"/share/zsh/site-functions &&
     rm -rf "$HOME"/beets
 
-git clone --depth 1 "https://gitlab.com/volian/nala" &&
+git clone --depth 1 "https://gitlab.com/volian/nala.git" &&
     mv "$HOME"/nala/debian/_nala "$PREFIX"/share/zsh/site-functions &&
     rm -rf "$HOME"/nala
 
