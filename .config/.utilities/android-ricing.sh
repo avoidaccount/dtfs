@@ -29,7 +29,7 @@ mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-hist
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
 
-nala install -y android-tools ani-cli aria2 asciinema bat binutils busybox difftastic dust exiftool eza fclones fd fdupes ffmpeg figlet flac fzf gh gitui glow golang hollywood &&
+nala install -y android-tools ani-cli aria2 asciinema bat binutils busybox difftastic dua exiftool eza fclones fd fdupes ffmpeg figlet flac fzf gh gitui glow golang hollywood &&
     nala install -y man maxcso navi nerdfix openjdk-17 openjdk-17-source p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade w3m w3m-img wget which zoxide &&
     nala remove -y nano
 
@@ -52,10 +52,11 @@ pip install --no-input beautifulsoup4 pipx pylast pyyaml requests &&
 
 git clone --depth 1 "https://github.com/beetbox/beets" &&
     mv "$HOME"/beets/extra/_beet "$PREFIX"/share/zsh/site-functions &&
-    nala --install-completion zsh &&
-    mv "$HOME"/.zfunc/_nala "$PREFIX"/share/zsh/site-functions &&
-    rm -rf "$HOME"/.zfunc &&
-    sd "fpath\+=~/.zfunc" "" "$HOME"/.config/zsh/.zshrc
+    rm -rf "$HOME"/beets
+
+git clone --depth 1 "https://gitlab.com/volian/nala" &&
+    mv "$HOME"/nala/debian/_nala "$PREFIX"/share/zsh/site-functions &&
+    rm -rf "$HOME"/nala
 
 cargo install cargo-update shellharden stylua taplo-cli typos-cli
 
