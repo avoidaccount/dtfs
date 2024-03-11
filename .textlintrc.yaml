@@ -5,8 +5,10 @@ rules:
     max-comma: true
     no-empty-section: true
     no-empty-element: true
+
     date-weekday-mismatch:
         lang: en-US
+
     period-in-list-item: true
     period-in-header: true
     footnote-order: true
