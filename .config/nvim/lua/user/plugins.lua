@@ -73,12 +73,7 @@ local plugins = {
         "tversteeg/registers.nvim",
         "kylechui/nvim-surround",
 
-        {
-            "nvim-neorg/neorg",
-
-            build = ":Neorg sync-parsers",
-            dependencies = { "3rd/image.nvim" },
-        },
+        "3rd/image.nvim",
 
         {
             "nvim-telescope/telescope.nvim",
