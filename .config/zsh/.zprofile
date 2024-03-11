@@ -9,22 +9,6 @@ dotfiles() {
     gitui --directory "$HOME"/.dtf/ --workdir "$HOME" "$@"
 }
 
-cop() {
-    cp --interactive --recursive --verbose "$@"
-}
-
-mdi() {
-    mkdir --parents --verbose "$@"
-}
-
-mov() {
-    mv --interactive --verbose "$@"
-}
-
-rem() {
-    rm --force --recursive --verbose "$@"
-}
-
 delete-empty-dirs() {
     find "$@" -type d -empty -delete -print
 }
