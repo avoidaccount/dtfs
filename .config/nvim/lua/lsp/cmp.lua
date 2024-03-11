@@ -26,7 +26,7 @@ cmp.setup({
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "latex_symbols", option = { strategy = 0 } },
-        { name = "neorg" },
+        { name = "orgmode" },
         { name = "nvim_lsp_document_symbol" },
         { name = "nvim_lsp_signature_help" },
         { name = "buffer" },

@@ -24,6 +24,8 @@ local plugins = {
     "nvim-tree/nvim-web-devicons",
     "dstein64/nvim-scrollview",
 
+    "nvim-orgmode/orgmode",
+
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
