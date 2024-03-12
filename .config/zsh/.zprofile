@@ -65,7 +65,7 @@ gdrive-folder-dl() {
     gdown --folder --output "/storage/emulated/0/Download" "$@"
 }
 
-sync-with-proton() {
+proton-sync() {
     rclone sync "$XDG_CONFIG_HOME"/.utilities/gallery-dl "proton:dotdroid/.utilities/gallery-dl" &&
         rclone sync "$XDG_CONFIG_HOME"/.utilities/ltex "proton:dotdroid/.utilities/ltex" &&
         rclone sync "$XDG_CONFIG_HOME"/beets/library.db "proton:dotdroid/beets" &&
