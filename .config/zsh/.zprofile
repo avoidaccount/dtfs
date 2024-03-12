@@ -26,7 +26,7 @@ ls() {
 }
 
 lt() {
-    eza --all --group-directories-first --hyperlink --sort=extension --tree "$@"
+    eza --all --group-directories-first --hyperlink --ignore-glob=.git --sort=extension --tree "$@"
 }
 
 autodl-with-gdl() {
