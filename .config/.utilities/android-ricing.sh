@@ -42,7 +42,10 @@ git clone --depth 1 "https://github.com/dylanaraps/pfetch" &&
     rm -rf "$HOME"/pfetch
 
 git clone "https://github.com/avoidaccount/dtfs" &&
-    mv -r "$HOME"/dtfs/* "$HOME"
+    mv "$HOME"/dtfs/.config "$HOME" &&
+    mv "$HOME"/dtfs/.editorconfig "$HOME" &&
+    mv "$HOME"/dtfs/.taplo.toml "$HOME" &&
+    mv "$HOME"/dtfs/.textlintrc.yml "$HOME"
 
 pip install --no-input beautifulsoup4 pipx pylast pyyaml requests &&
     pipx install beets gdown pyright qobuz-dl yamlfix yamllint yt-dlp &&
@@ -60,7 +63,7 @@ git clone --depth 1 "https://gitlab.com/volian/nala.git" &&
 
 cargo install cargo-update shellharden stylua taplo-cli typos-cli
 
-go install "github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorconfig-checker@latest" "mvdan.cc/sh/v3/cmd/shfmt@latest"
+go install "mvdan.cc/sh/v3/cmd/shfmt@latest"
 
 npm install bash-language-server markdownlint-cli textlint vscode-langservers-extracted yaml-language-server &&
     npm install textlint-rule-no-todo textlint-rule-no-start-duplicated-conjunction textlint-rule-max-comma textlint-rule-no-empty-section textlint-rule-no-empty-element &&

@@ -31,7 +31,7 @@ lt() {
 
 autodl-with-gdl() {
     gdl --input-file "$XDG_CONFIG_HOME"/.utilities/gallery-dl/updates.txt
-    termux-media-scan -r "/storage/emulated/0/gdl"
+    termux-media-scan -r "/storage/emulated/0/Download"
 }
 
 batch-rename-pattern() {
@@ -53,8 +53,8 @@ dups-remove() {
 }
 
 gdl() {
-    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
-    termux-media-scan -r "/storage/emulated/0/gdl"
+    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yml "$@"
+    termux-media-scan -r "/storage/emulated/0/Download"
 }
 
 gdrive-file-dl() {
