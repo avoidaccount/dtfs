@@ -13,7 +13,7 @@ lspconfig.ltex.setup({
             -- https://valentjn.github.io/ltex/supported-languages.html#natural-languages
             load_langs = { "en-US" }, -- en-US as default
             init_check = true,
-            path = vim.fn.expand("$XDG_CONFIG_HOME/.utilities/ltex"),
+            path = vim.fn.expand("$HOME/.utilities/ltex"),
             log_level = "info",
             server_opts = nil,
         })
