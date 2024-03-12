@@ -1,36 +1,20 @@
 "$schema" = "https://starship.rs/config-schema.json"
 palette   = "catppuccin_mocha"
 
-format = """
-[](#9A348E)\
-$username\
-[](bg:#DA627D fg:#9A348E)\
+format="""
 $directory\
-[](fg:#DA627D bg:#33658A)\
 $git_branch\
 $git_status\
-[ ](fg:#33658A)\
+$character
 """
 
+[character]
+    success_symbol = "[🚀 ❯](red bold)"
+    vimcmd_symbol  = "[❮ 🛸](green bold)"
+
 [directory]
-    format            = "[ $path ]($style)"
-    style             = "bg:#DA627D"
-    truncation_length = 3
-
-[git_branch]
-    format = "[ $symbol $branch ]($style)"
-    style  = "bg:#33658A"
-    symbol = ""
-
-[git_status]
-    format = "[$all_status$ahead_behind ]($style)"
-    style  = "bg:#33658A"
-
-[username]
-    format      = "[🚀 $user ]($style)"
-    show_always = true
-    style_root  = "bg:#9A348E"
-    style_user  = "bg:#9A348E"
+    truncation_length = 4
+    style = "bold mauve"
 
 [palettes.catppuccin_mocha]
     base      = "#1e1e2e"
