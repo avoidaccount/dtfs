@@ -8,6 +8,9 @@ export EDITOR=nvim
 export LANG=en_US.UTF-8
 export VISUAL=nvim
 
+export HOSTNAME=android
+export USER=daru
+
 export KNOWLEDGE_BASE="$HOME"/wikimyro
 export ZPLUGINS="$HOME"/.shplugins
 
@@ -41,7 +44,7 @@ export FZF_DEFAULT_OPTS_FILE="$XDG_CONFIG_HOME"/fzf/fzfrc
 export PAGER="nvim +Man!"
 
 # pfetch config
-export PF_INFO="ascii os host kernel shell pkgs wm de editor memory palette"
+export PF_INFO="ascii title os host kernel shell pkgs wm de editor memory palette"
 
 export RCLONE_BUFFER_SIZE=512Mi
 export RCLONE_CHECK_FIRST=TRUE
