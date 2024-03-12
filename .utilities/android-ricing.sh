@@ -45,7 +45,8 @@ git clone "https://github.com/avoidaccount/dtfs" &&
     mv "$HOME"/dtfs/.config "$HOME" &&
     mv "$HOME"/dtfs/.editorconfig "$HOME" &&
     mv "$HOME"/dtfs/.taplo.toml "$HOME" &&
-    mv "$HOME"/dtfs/.textlintrc.yml "$HOME"
+    mv "$HOME"/dtfs/.textlintrc.yml "$HOME" &&
+    mv "$HOME"/dtfs/.utilities "$HOME"
 
 pip install --no-input beautifulsoup4 pipx pylast pyyaml requests &&
     pipx install beets gdown pyright qobuz-dl yamlfix yamllint yt-dlp &&
