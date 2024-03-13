@@ -3,15 +3,11 @@ vim.g.maplocalleader = " "
 
 local map = vim.keymap.set
 
-map("i", "jj", "<Esc>")
+map("i", "jk", "<Esc>")
 map("n", "<C-n>", ":e ")
 map("n", "<leader>w", ":w<CR>")
 map("n", "<leader>q", ":q<CR>")
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>")
-map("n", "<leader>dd", '"_dd')
-map("v", "<leader>dd", '"_dd')
-map("n", "x", '"_dl')
-map("v", "x", '"_dl')
 
 -- PLUGINS
 
