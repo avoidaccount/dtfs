@@ -20,7 +20,6 @@ export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
-export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
 export PIPX_BIN_DIR="$XDG_DATA_HOME"/pipx/bin
 export PIPX_MAN_DIR="$PREFIX"/share/man
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/config
