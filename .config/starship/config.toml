@@ -9,12 +9,12 @@ $character
 """
 
 [character]
-    error_symbol = "[🚀 ❯❯](red bold)"
+    error_symbol = "[🚀 ❯❯](rosewater bold)"
     success_symbol = "[🚀 ❯❯](bold red)"
     vimcmd_symbol  = "[❮❮ 🛸](bold green)"
 
 [directory]
-    truncation_length = 4
+    truncation_length = 3
     style = "bold mauve"
 
 [palettes.catppuccin_mocha]
