@@ -22,9 +22,10 @@ git clone --depth 1 "https://github.com/Aloxaf/fzf-tab" &&
     git clone --depth 1 "https://github.com/zsh-users/zsh-syntax-highlighting" &&
     git clone --depth 1 "https://github.com/hlissner/zsh-autopair" &&
     git clone --depth 1 "https://github.com/zsh-users/zsh-autosuggestions" &&
-    git clone --depth 1 "https://github.com/joshskidmore/zsh-fzf-history-search"
+    git clone --depth 1 "https://github.com/joshskidmore/zsh-fzf-history-search" &&
+    git clone --depth 1 "https://github.com/jeffreytse/zsh-vi-mode"
 
-mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-history-search "$HOME/.shplugins" &&
+mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-history-search zsh-vi-mode "$HOME"/.shplugins &&
     git clone --depth 1 "https://github.com/catppuccin/zsh-syntax-highlighting" &&
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting

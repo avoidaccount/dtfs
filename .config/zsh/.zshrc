@@ -44,6 +44,7 @@ source "$ZPLUGINS"/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source "$ZPLUGINS"/zsh-autopair/autopair.zsh
 source "$ZPLUGINS"/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source "$ZPLUGINS"/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh
+source "$ZPLUGINS"/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 eval "$(navi widget zsh)"
 eval "$(register-python-argcomplete pipx)"
