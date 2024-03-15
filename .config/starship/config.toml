@@ -4,7 +4,7 @@ palette   = "catppuccin_mocha"
 format="""
 $directory\
 $git_branch\
-$git_status\
+$git_status
 $character
 """
 
