@@ -6,7 +6,7 @@ blocks: [permission, user, date, git, name]
 color:
     when: auto
     theme: custom
-date: date
+date: +%d %b %y %X
 dereference: false
 display: almost-all
 
