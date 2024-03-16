@@ -19,7 +19,7 @@ delete-empty-dirs() {
 }
 
 find-broken-symlinks() {
-    find "$@" -type l ! -exec test -e {} \; -print
+    find "$@" -type l ! -exec test -e {} \;
 }
 
 l() {
