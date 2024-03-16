@@ -18,15 +18,15 @@ find-broken-symlinks() {
 }
 
 l() {
-    lsd --long "$@"
+    eza --all --group-directories-first --hyperlink --long --sort=extension "$@"
 }
 
 ls() {
-    lsd "$@"
+    eza --all --group-directories-first --hyperlink --sort=extension "$@"
 }
 
 lt() {
-    lsd --tree "$@"
+    eza --all --group-directories-first --hyperlink --ignore-glob=.git --sort=extension --tree "$@"
 }
 
 autodl-with-gdl() {
@@ -53,11 +53,11 @@ dups-remove() {
 }
 
 gdl() {
-    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yml "$@"
-    fclones group "/storage/emulated/0/Download/" |
+    gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yaml "$@"
+    fclones group "/storage/emulated/0/Download" |
         fclones remove
-    delete-empty-dirs "/storage/emulated/0/Download/"
-    termux-media-scan -r "/storage/emulated/0/Download/"
+    delete-empty-dirs "/storage/emulated/0/Download"
+    termux-media-scan -r "/storage/emulated/0/Download"
 }
 
 gdrive-file-dl() {
