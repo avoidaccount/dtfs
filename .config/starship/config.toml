@@ -1,21 +1,25 @@
 "$schema" = "https://starship.rs/config-schema.json"
 palette   = "catppuccin_mocha"
 
-format="""
+format = """
 $directory\
 $git_branch\
-$git_status
+$git_status\
 $character
 """
 
 [character]
-    error_symbol = "[🚀 ❯❯](rosewater bold)"
+    error_symbol   = "[🚀 ❯❯](rosewater bold)"
     success_symbol = "[🚀 ❯❯](bold red)"
     vimcmd_symbol  = "[❮❮ 🛸](bold green)"
 
 [directory]
+    style             = "bold mauve"
     truncation_length = 3
-    style = "bold mauve"
+
+    [directory.substitutions]
+        "Downloads" = " "
+        "downloads" = " "
 
 [palettes.catppuccin_mocha]
     base      = "#1e1e2e"
