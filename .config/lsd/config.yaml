@@ -1,0 +1,34 @@
+---
+classic: false
+
+blocks: [permission, user, date, name]
+
+color:
+    when: auto
+    theme: default
+date: date
+dereference: false
+display: almost-all
+
+icons:
+    when: auto
+    theme: fancy
+    separator: ' '
+ignore-globs: [.git]
+indicators: false
+layout: grid
+
+recursion:
+    enabled: false
+size: default
+permission: rwx
+
+sorting:
+    column: name
+    reverse: false
+    dir-grouping: first
+no-symlink: false
+total-size: false
+hyperlink: auto
+symlink-arrow: ⇒
+header: false
