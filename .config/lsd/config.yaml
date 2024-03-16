@@ -5,7 +5,7 @@ blocks: [permission, user, date, name]
 
 color:
     when: auto
-    theme: default
+    theme: custom
 date: date
 dereference: false
 display: almost-all
