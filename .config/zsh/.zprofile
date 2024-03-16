@@ -1,5 +1,10 @@
 export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/share/texlive/bin:"$HOME"/.local/share/cargo/bin:"$HOME"/.local/share/go/bin:"$HOME"/.local/share/ltex-ls/bin:"$HOME"/.local/share/npm/bin:"$HOME"/.local/share/pipx/bin
 
+reload() {
+    clear &&
+        source "$ZDOTDIR"/.zshrc
+}
+
 # fallback for creating a new bare repo
 _dotfiles() {
     git --git-dir="$HOME"/.dtf/ --work-tree="$HOME" "$@"
@@ -18,7 +23,7 @@ find-broken-symlinks() {
 }
 
 l() {
-    eza --all --group-directories-first --hyperlink --long --sort=extension "$@"
+    eza --all --group-directories-first --git --hyperlink --long --sort=extension "$@"
 }
 
 ls() {
