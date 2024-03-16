@@ -1,7 +1,7 @@
 ---
 classic: false
 
-blocks: [permission, user, date, name]
+blocks: [permission, user, date, git, name]
 
 color:
     when: auto
