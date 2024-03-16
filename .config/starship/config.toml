@@ -18,8 +18,8 @@ $character
     truncation_length = 3
 
     [directory.substitutions]
-        "Downloads" = " "
-        "downloads" = " "
+        "Downloads" = ""
+        "downloads" = ""
 
 [palettes.catppuccin_mocha]
     base      = "#1e1e2e"
