@@ -9,6 +9,17 @@ zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 promptinit
 
+bindkey -v
+
+# Add text object extension -- eg ci" da(:
+autoload -U select-quoted
+zle -N select-quoted
+for m in visual viopp; do
+    for c in {a,i}{\',\",\`}; do
+        bindkey -M $m $c select-quoted
+    done
+done
+
 setopt autocd
 setopt autolist
 setopt interactivecomments
@@ -32,9 +43,7 @@ setopt sharehistory
 
 source "$ZPLUGINS"/fzf-tab/fzf-tab.plugin.zsh
 
-zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' use-cache true
