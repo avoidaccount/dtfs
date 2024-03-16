@@ -58,7 +58,6 @@ local plugins = {
     },
 
     "rebelot/kanagawa.nvim",
-    "navarasu/onedark.nvim",
     "folke/tokyonight.nvim",
 
     {

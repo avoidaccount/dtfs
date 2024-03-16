@@ -21,4 +21,5 @@ require("tokyonight").setup({
     dim_inactive = true,
     lualine_bold = true,
 })
+
 vim.cmd.colorscheme("tokyonight")
