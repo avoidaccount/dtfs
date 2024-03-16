@@ -80,11 +80,3 @@ remote-sync() {
         rclone sync "$KNOWLEDGE_BASE" "proton:wikimyro" &&
         rclone sync "$HOME"/tcc "proton:archive/tcc"
 }
-
-zarchive() {
-    7z a -mx=0 "$@"
-}
-
-zxtract() {
-    7z x -y "$@"
-}
