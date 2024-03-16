@@ -18,15 +18,15 @@ find-broken-symlinks() {
 }
 
 l() {
-    eza --all --group-directories-first --hyperlink --long --sort=extension "$@"
+    lsd --long "$@"
 }
 
 ls() {
-    eza --all --group-directories-first --hyperlink --sort=extension "$@"
+    lsd "$@"
 }
 
 lt() {
-    eza --all --group-directories-first --hyperlink --ignore-glob=.git --sort=extension --tree "$@"
+    lsd --tree "$@"
 }
 
 autodl-with-gdl() {
