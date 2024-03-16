@@ -16,7 +16,7 @@ autoload -U select-quoted
 zle -N select-quoted
 for m in visual viopp; do
     for c in {a,i}{\',\",\`}; do
-        bindkey -M $m $c select-quoted
+        bindkey -M "$m" "$c" select-quoted
     done
 done
 
@@ -43,10 +43,13 @@ setopt sharehistory
 
 source "$ZPLUGINS"/fzf-tab/fzf-tab.plugin.zsh
 
+zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3>7?7:($#PREFIX+$#SUFFIX)/3))numeric)'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' rehash true
 zstyle ':completion:*' use-cache true
+zstyle ':completion:*' rehash true
 
 source "$ZPLUGINS"/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source "$ZPLUGINS"/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh

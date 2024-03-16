@@ -54,10 +54,10 @@ dups-remove() {
 
 gdl() {
     gallery-dl --config-yaml "$XDG_CONFIG_HOME"/gallery-dl/config.yml "$@"
-    fclones group "/storage/emulated/0/Download" |
+    fclones group "/storage/emulated/0/Download/" |
         fclones remove
-    delete-empty-dirs "/storage/emulated/0/Download"
-    termux-media-scan -r "/storage/emulated/0/Download"
+    delete-empty-dirs "/storage/emulated/0/Download/"
+    termux-media-scan -r "/storage/emulated/0/Download/"
 }
 
 gdrive-file-dl() {
