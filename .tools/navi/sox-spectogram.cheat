@@ -1,0 +1,4 @@
+% flac, spectrogram
+
+# Generate spectrogram of a FLAC file
+sox "<input>" -n remix 1 spectrogram -X 500 -y 1025 -z 120 -w Kaiser -S 1:00 -d 0:02 -o "zoom.png"

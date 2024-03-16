@@ -1,0 +1,4 @@
+% gallery-dl, filter
+
+# gallery-dl with filter by year
+gdl --filter "date >= datetime(<yyyy>, <mm>, <dd>)" "<input>"
