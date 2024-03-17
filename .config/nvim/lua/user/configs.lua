@@ -19,9 +19,9 @@ require("lsp.nvterm")
 require("lsp.trouble")
 -- require("lsp.ltex-extra")
 
--- require("schemes.catppuccin")
+require("schemes.catppuccin")
 -- require("schemes.kanagawa")
-require("schemes.tokyonight")
+-- require("schemes.tokyonight")
 
 require("tools.autopairs")
 require("tools.colorizer")

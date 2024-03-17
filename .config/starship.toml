@@ -9,9 +9,9 @@ $character
 """
 
 [character]
-    error_symbol   = "[🚀 ❯❯](rosewater bold)"
-    success_symbol = "[🚀 ❯❯](bold red)"
-    vimcmd_symbol  = "[❮❮ 🛸](bold green)"
+    error_symbol   = "[🚀 ❯❯](bold peach)"
+    success_symbol = "[🚀 ❯❯](bold peach)"
+    vimcmd_symbol  = "[❮❮ 🛸](bold rosewater)"
 
 [directory]
     style             = "bold mauve"
