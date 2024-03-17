@@ -29,7 +29,7 @@ mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-hist
     mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
 
-nala install -y android-tools ani-cli aria2 asciinema bat binutils busybox difftastic dua exiftool eza fclones fd fdupes ffmpeg figlet flac fzf gh gitui glow golang hollywood inetutils libjxl-progs &&
+nala install -y android-tools ani-cli aria2 asciinema bat binutils busybox difftastic dua exiftool eza fclones fd fdupes ffmpeg figlet flac fzf gh gitui glow golang hollywood hyperfine inetutils libjxl-progs &&
     nala install -y man maxcso mtools navi nerdfix openjdk-17 openjdk-17-source p7zip pandoc pkgtop procs ripgrep ripgrep-all rnr rust sd sox sqlite starship stylua tealdeer termux-api texlab texlive-installer topgrade unzip w3m w3m-img wget which zoxide &&
     nala remove -y nano
 
