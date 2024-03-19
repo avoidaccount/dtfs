@@ -16,7 +16,7 @@ else
     mkdir -v "$HOME"/.config
 fi
 
-mkdir "$HOME"/.shplugins
+mkdir -p "$HOME"/.local/share/zsh/plugins
 
 git clone --depth 1 "https://github.com/Aloxaf/fzf-tab" &&
     git clone --depth 1 "https://github.com/zsh-users/zsh-syntax-highlighting" &&
@@ -24,9 +24,9 @@ git clone --depth 1 "https://github.com/Aloxaf/fzf-tab" &&
     git clone --depth 1 "https://github.com/zsh-users/zsh-autosuggestions" &&
     git clone --depth 1 "https://github.com/joshskidmore/zsh-fzf-history-search"
 
-mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-history-search "$HOME"/.shplugins &&
+mv zsh-syntax-highlighting fzf-tab zsh-autopair zsh-autosuggestions zsh-fzf-history-search "$HOME"/.local/share/zsh/plugins &&
     git clone --depth 1 "https://github.com/catppuccin/zsh-syntax-highlighting" &&
-    mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.shplugins/zsh-syntax-highlighting &&
+    mv zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh "$HOME"/.local/share/zsh/plugins/zsh-syntax-highlighting &&
     rm -rf "$HOME"/zsh-syntax-highlighting
 
 nala install -y android-tools ani-cli aria2 asciinema bat binutils busybox difftastic dua exiftool eza fclones fd fdupes ffmpeg figlet flac fzf gh gitui glow golang hollywood hyperfine inetutils libjxl-progs &&
