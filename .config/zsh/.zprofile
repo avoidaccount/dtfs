@@ -2,6 +2,7 @@ export PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/
 
 reload() {
     clear &&
+        termux-reload-settings &&
         source "$ZDOTDIR"/.zshrc
 }
 
