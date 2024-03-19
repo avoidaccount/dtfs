@@ -12,7 +12,7 @@ export HOSTNAME=android
 export USER=daru
 
 export KNOWLEDGE_BASE="$HOME"/wikimyro
-export ZPLUGINS="$HOME"/.shplugins
+export ZPLUGINS="$XDG_DATA_HOME"/zsh/plugins
 
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
