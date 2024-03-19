@@ -35,6 +35,14 @@ lt() {
     eza --all --group-directories-first --hyperlink --ignore-glob=.git --sort=extension --tree "$@"
 }
 
+tcr() {
+    tar --auto-compress --create --verbose --file="$@"
+}
+
+txr() {
+    tar --extract --verbose --file="$@"
+}
+
 autodl-with-gdl() {
     gdl --input-file "$HOME"/.tools/gallery-dl/updates.txt
     termux-media-scan -r "/storage/emulated/0/Download"
